@@ -20,6 +20,13 @@
   	<script src="templates/scripts/ww.jquery.min.js"></script>
 
 	 <script src="templates/scripts/wwhelp.js"></script>
+	<script>
+        if (!window.parent.frames["wwhelp_left"] && window.location.href.substr(0,4) == "http")
+        {
+            var page = window.location.href;
+            page = page.substr(window.location.href.lastIndexOf("/")+1);
+            window.location = "index.htm?page=" + page;
+        }
 
 	<topictype value="Topictype" />
 	<script>		  
