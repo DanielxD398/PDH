@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+<head> 
+		<meta charset="utf-8" /> 
+	 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	 	<title>Hora E/S - Forma de uso - PayDay Help</title>	 
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+		<!-- <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js#startOpened,overrideConsole"></script> -->
+	<link rel="stylesheet" type="text/css" href="templates/scripts/bootstrap/dist/css/bootstrap.min.css" />	
+	<link rel="stylesheet" type="text/css" href="templates/scripts/fontawesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="templates/wwhelp.css" />
+
+	 	<script src="templates/scripts/jquery/jquery.min.js"></script>	
+
+		<script src="templates/scripts/highlightjs/highlight.pack.js"></script>
+	<script src="templates/scripts/highlightjs-badge.min.js"></script> 
+	<link href="templates/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+  	<script src="templates/scripts/ww.jquery.min.js"></script>
+
+	 <script src="templates/scripts/wwhelp.js"></script>
+
+	<topictype value="Topictype" />
+	<script>		  
+	$(document).ready( function() {
+		helpBuilder.initializeLayout();
+		// expand all top level topics
+		setTimeout( helpBuilder.tocExpandTop, 2);
+	});
+	</script>
+</head>
+<body style="background-color:#F5FAFF;">
+
+	 <div class="flex-master">
+	<div class="banner">
+				<img src="images/escudo.png" class="banner-logo" />
+				<div class="projectname">PayDay Help</div>
+
+		  </div>
+
+		  <div class="page-content">
+				<nav class="topic-outline">
+				<div class="topic-outline-header">En esta página:</div>
+					 <div class="topic-outline-content"></div>
+				</nav>
+		  <div class="splitter"></div>
+		  <div class="main-content">
+
+				<!-- Rendered Content -->
+				<article class="content-pane">
+				<div class="row">
+					<div class="column left just">
+					</div>
+						<div class="column center just">
+
+
+<header class="content-title">
+	 <img src=images\Topic.png>
+Hora E/S - Forma de uso
+</header>
+
+<div class="content-body" id="body"><p>Como veremos en la siguiente figura, la pantalla está dividida en tres principales grupos:<p><ul><li> La primera muestra los datos generales del empleado, son sólo de referencia.<br><li> La segunda tiene los campos donde se mostrará el resumen de la jornada regular, ausencias y tardanzas que se registren día por día.  En estos campos no se puede escribir, ellos se llenan a medida que se captan los datos.  También hay una opción para registrar Deudas, las llamadas <a href="_20m0lboxl.htm" >Deudas Rápidas</a>.<br><li> La tercera tiene la pantalla titulada Hora de Entrada/Hora de Salida, donde se registran día por día las horas trabajadas.   <br></ul><br><p align="CENTER"><img src="images\Planillas\Introducir\HoraESconhorario.png"></p><br>                                                    <br>Como explicamos en los métodos de captura de datos, el método Hora Entrada / Hora Salida cuenta con tres variantes de uso: con Horario vacío, con Horario definido y con Interfaz de Reloj.  En la figura anterior, podemos apreciar una planilla generada para un trabajador con Horario Definido, en este caso PayDay generó cada día de pago de acuerdo a un horario previamente establecido.  Si tuviésemos un horario vacío, tendríamos la misma pantalla pero la sección donde está el día a día, se generaría en blanco y entonces el usuario tendrá que registrar cada uno de los días que se van a pagar. Si hubiese interfaz con reloj utilizando éste método, estos registros provendrían de la importación del reloj.  <p><br>Para cuando exista horario definido o interfaz con reloj, sólo será necesario realizar las modificaciones requeridas. Vamos a explicar los pasos para incluir manualmente los datos de la planilla a pagar, cuando utilizamos éste método con horario vacío.  En este caso su pantalla será como se muestra a continuación:<p><p align="CENTER"><img src="images\Planillas\Introducir\HoraEShorariovacio.png"></p><br>	<br>Estando en esta pantalla, ya sea que esté vacía o con información, podemos utilizarla presionando las siguientes teclas: <p>"INSERT", para incluir o registrar un día o una jornada de trabajo. <br>"DELETE", para borrar una línea previamente registrada <br>"ENTER", para modificar o revisar la información de un día registrado.<p><p align="CENTER"><img src="images\Planillas\Introducir\CapturahorasOrdyExtra.png"></p><br>	<br>Para añadir información en esta pantalla, realice lo siguiente:<p>1.	Indique la Fecha:  coloque el día en que el empleado trabajó. Formato: dd/mm/aaaa<p>2.	Verifique el día: el sistema le colocará el día que corresponde a la fecha que acaba de introducir.<p>3.	Seleccione el tipo de día: Se refiere a la clasificación de los días para la aplicación de los recargos correspondientes, tal como se muestran en la siguiente tabla: <p>
+<table align="center" border="1" width="65%">
+<tr>
+<th>Tipo de Día</th>
+<th>Descripción</th>
+</tr>
+<tr> 
+<td>Día Normal</td>
+<td>Se refiere al día en que el empleado trabajó de manera regular</td></tr>
+<tr>
+  <td>Certificado Médico</td>
+  <td>Cuando el empleado se ausenta por enfermedad</td>
+</tr>
+<tr>
+  <td >Ausencia NO pagada </td>
+  <td>Ausencias del trabajo que van a ser descontadas </td>
+</tr>
+<tr>
+  <td>Ausencia Pagada</td>
+  <td>Ausencias que van a ser remuneradas económicamente</td>
+</tr>
+<tr>
+  <td>Descanso Obligatorio</td>
+  <td>Si el empleado trabaja su día de descanso semanal obligatorio</td>
+</tr>
+<tr>
+  <td Nowrap>Descanso + Recargo Compensatorio</td>
+  <td>Si el empleado trabaja su día de descanso y se le va pagar el recargo por trabajar el día que se le debe dar en compensación por su día de descanso.</td>
+</tr>
+<tr>
+  <td Nowrap>Fiesta Nacional Trabajada	</td>
+  <td>Si el empleado trabaja en un día feriado, ya sea por duelo o fiesta nacional.</td>
+</tr>
+<tr>
+  <td>Día Libre Trabajado</td>
+  <td>Si el empleado trabajó el día que tiene asignado como libre (Art. 49)</td>
+</tr>
+<tr>
+  <td>Día Compensatorio Trabajado</td>
+  <td>Si el empleado trabajó el día que se le había dado en compensación por haber trabajo en su día de descanso Obligatorio.</td>
+</tr>
+</table>
+<p><br>4. Coloque la hora de Entrada y la hora de Salida: Se debe indicar la hora en que comenzó y terminó la jornada laboral del trabajador.  Se utiliza el formato militar, por ejemplo: 16:00 para indicar las 4 de la tarde.<p>5. Verifique el detalle del cálculo: observe que en esa pantalla se desglosa el día registrado, detallando el tipo de  jornada (ordinaria y extraordinaria) con  la cantidad de horas, las horas que se restan por comida, los recargos que se aplican y el monto a pagar por el día registrado.<p>6. Verifique el resumen del cálculo: en este punto se muestra el detalle del cálculo con el resumen del total de horas regulares y de sobretiempo trabajadas, las ausencias y tardanzas tanto en el tramo que ha introducido como en el día completo, en los campos ESTE TRAMO y TODO EL DIA, asegúrese que está correcto.<p>7. Verifique si es Horario Estricto: Esta opción indica que el cálculo se debe basar específicamente en el horario establecido.  Por ejemplo si un empleado debe entrar a las 8:00 y salir a las 17:00, y un día llega a las 8:30 y sale a las 17:30, el programa descontará su tardanza de ½  hora y no pagará la  ½ hora de sobretiempo, a menos que éste sea autorizado. <p>8. Verifique si Todo es Jornada Extraordinaria:  Esta opción le indica al sistema, que las horas introducidas son TODAS de sobretiempo.  <p>9. Verifique si se requiere calcular Tiempo de Comida:  Como hemos visto al incluir las horas incluimos la hora de entrada y la de salida, y el programa calcula el total de horas trabajadas, con esta opción podemos indicar que se rebaje de esas horas el tiempo utilizado por el empleado para el almuerzo.  Para configurarlo, vea la configuración requerida en <i>Mantenimiento|Horarios|<a href="_1u00zqi35.htm" >Otros</a></i>.<p>10. Autorizar Sobretiempo:  En éste método es necesario autorizar el  sobretiempo para que el programa pague estas horas.  También es posible predefinir en el horario esta autorización. Pueden existir tres formas de sobretiempo en un mismo día y éstas se pueden autorizar o no, independientemente una de la otra, así:<br> 	<br>
+<table  border="1" width="65%">
+<tr>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+<tr> 
+<td>Antes de Entrada</td>
+<td>Se autoriza el sobretiempo trabajado antes de la hora de entrada regular del empleado.   Por ejemplo si el empleado entra a las 08:00 pero entró a las 07:30, ésta media hora se le calculará como extra.</td></tr>
+<tr>
+  <td>Durante Comida </td>
+  <td>Permite autorizar la(s) hora(s) calculadas de comida como sobretiempo.</td>
+</tr>
+<tr>
+  <td Nowrap>Después de Salida/Espec </td>
+  <td>Indica que se pague el sobretiempo trabajado después de la hora de salida normal del empleado.  
+ </td>
+</tr>
+</table>
+<p><br>11. Proyecto y Fase: Estos campos son especiales para las empresas constructoras o las que utilizan el módulo de costos. En estos casos, PayDay carga las horas trabajadas al proyecto al cual el empleado está asignado en sus datos generales; sin embargo, es posible modificarlo con las opciones siguientes: <p>	PROYECTO:  Para cambiar el proyecto en el cual el empleado trabajó las horas registradas. <br>	FASE:   Para cambiar la fase del proyecto en la que el empleado trabajó las horas. <p>Una vez coloquemos todos estos datos, presione <img src="images\Botones\Guardar1.png"> para aceptar como válidos los datos introducidos o <img src="images\Botones\Cancelar1.png"> para salir de la pantalla activa sin grabar los datos captados. <p>Para registrar otro tipo de ingresos, veamos la pantalla <a href="_20m0lboxm.htm" >Otros Ingresos</a>
+</div>
+						</div>
+				</div>
+				</article>
+					 <hr />
+					 <div><a href="http://www.payday.com.pa"><img width=11% align=right src="images/logo.png"/></a></div>
+				<small>
+						  &copy; Sosa y Cía, S.A., 1996-2025 &bull;
+						  Última actualización: 02/11/20
+						  <br />
+					 </small>		
+				<br class="clearfix" />
+					 <br />
+					 <!-- End Rendered Content -->
+				</div>
+		  </div>		  
+	 </div>
+
+
+<div style="position: absolute; left: 0; bottom: 0; padding: 8px; background-color: #333; color: white; display:block !important; font-size: 11pt; border-radius-top-right: 3px; box-shadow: 3px 3px 8px #535353;opacity: 0.87" data-id="hbp">	
+	<a href="http://helpbuilder.west-wind.com/" target="_helpbuilder">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAFTklEQVR4Xt3TW2wcZxnG8f83M7szs7sz68M6PgUrbp0El7ZJG1Kq1LiyAmqIDaEpBkFUKRI0SE2LlEr0AirccNEUqghRJECUcugFbWQQIXCRCCiqiB1aQkSjOE5iJ44TH2Lv2uvd2eOcPnIRS16pXCAhLvjdvO/V+1w8evmfO3bsqHn69NctKRH8FwiAAwcORPZ/1ntmY2f1y8mEu1lVAwEiL+CkUNXvdu3ZoCwtVvcFaD2ReCLS/+LnYlMnz/s3zlw7byXiJzvvT/z6Dz/5aokPIIaGhrTeLePH+x72+4WgFhBK4fcfNNRTp6Milqzj3v4d7HzhcbwVh5FXTjF95jqy6i/UWe7Q4IB47fDhwyFrKLqYeKLno97qcULJWCYbHXU9CYAipHbkOcT2Jx6h56ldbNv3KF4+xK2EjJ+6gKqC61aa09nwxz8frgwPDByI1QTc0+l+MhoRAEiJFGpkz859Ky8f+12GVXd3SLp2dNO6qZWgUKS8lEXTY3xx+Fk2fOp+orZJWIVSIbL3/Sv68ODgoModWiq5/dB7l8QLABE1G3zn6Gi8577CG7v62lh1I2tTyuVRQx/fd9ECF7/qYthxtg4+xPzFa7hhldJiAbdq7h49V/c8cARAsMbzzz6+/uB+OdLRpnRwx/yyzosnHmLGb8NIJrCUADNmYN7eg1gdYcLi9SdfYcund/DuW6MgBBqV4uZ1E3dfuPD2gsIaW+91v7Z6XEoYm27lz+e3c7sT3EKZas6hXKiQ9Jb5eJtHPDfDzF9GeGD3VvLpDCglkCV8ZHzesQ8CaKyhm2p3GALA2bEIvzoRJZGsUC98mpIQr1Ox4grrGyS9m0v4XoTZOZWxv/2DhVkHEYJAwVACwjC2B/iWYI2u7p2vrd9411fK5YAmK0JDXGEpD4rViIwlWAl1ohGFhA4tSYEZ11kJDEqGzdvfexOvHAAKughRVN/t7dlqaazx1D7jvq4NWbxKFRWD9851cH0uC64DpZD2VptiqFIoCG56Klq+imqCcAPMtnqyV2eoV3y0iETTiKZSTnNNB9u6Zf3enSFf6I+w40GfDe0pJBpGNIrjVBifzFDOOrQkJM1WiKmGVEouN8enyVydpG3jhwiisD7l8eFuGzBrOxCKyiqpRDj+zjSBiJKrhDSYGreKPgsZh3S2gG6aJOtM6u2QSvYSW7p0DHuJhk90cVdDDiPVXklPpW8J1vjNG3t+v7nLHljOeSxlVV76WQuaKvFEBA2JrqtkClVk4OJWXEw7jqZH8dwyE++8i2YbCFmhyQIjqv1z/NLIA0rNH7xa//RLv9zkP/dqJy8f66ZY9licm+PG+EWKrsQPIRWLcuvyJNPnzjIzdoGFqSnSU9cJ/RKpthS6ZbG0VEJf13kcoCbg6tlf3Hz/cuatpkabhoTEXtdKPlskOzfPxJkRVpwqjuNgqUWkhEJ6gdzsLG7eQWiC0u3pzM+CYThNjc0/AtCoxbKz/M2Gcv1n3FC31ZUrtNS7NFsWxaLP8vWLtG/qpuRrtDeZLC47qJqGbteBrpJfvEXgl4k3dh/542+PLgIIPsA9jz4z2NDU8mYuW1Yv//VPqGoEOyEwDAiR5PKScrlKY1Lg+z45x0NKj1B6JJqbTzzWc2jv8PDng9qAWjw88O0vZaav/PTm5QkTBCAJZYBEAgABAlCVEMsUVN0qFczhjraeJycnf1DlDsG/x5a+pz8yf2Xyh+VCtdctV5BIpJRIQgQ+AMgQFNIR0/pGKTf6OiD5Tz24+/DH7MZd348l+/5uWL1pM/5INmb1Xk3U952wmh7b37ptKMb/rX8BL2lNNiGFZBEAAAAASUVORK5CYII="
+ style="float: left; margin-right: 15px;"/>
+	</a>
+	This page was generated by the shareware version of <a href="http://helpbuilder.west-wind.com/" target="_helpbuilder" style="color: cornsilk;font-weight: bold;">West Wind Html Help Builder</a>.	
+</div></body>
+</html>

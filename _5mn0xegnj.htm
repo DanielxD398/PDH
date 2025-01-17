@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+<head> 
+		<meta charset="utf-8" /> 
+	 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	 	<title>Pruebas - Informes</title>	 
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+		<!-- <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js#startOpened,overrideConsole"></script> -->
+	<link rel="stylesheet" type="text/css" href="templates/scripts/bootstrap/dist/css/bootstrap.min.css" />	
+	<link rel="stylesheet" type="text/css" href="templates/scripts/fontawesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="templates/wwhelp.css" />
+
+	 	<script src="templates/scripts/jquery/jquery.min.js"></script>	
+
+		<script src="templates/scripts/highlightjs/highlight.pack.js"></script>
+	<script src="templates/scripts/highlightjs-badge.min.js"></script> 
+	<link href="templates/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+  	<script src="templates/scripts/ww.jquery.min.js"></script>
+
+	 <script src="templates/scripts/wwhelp.js"></script>
+
+	<topictype value="Topictype" />
+	<script>		  
+	$(document).ready( function() {
+		helpBuilder.initializeLayout();
+		// expand all top level topics
+		setTimeout( helpBuilder.tocExpandTop, 2);
+	});
+	</script>
+</head>
+<body style="background-color:#F5FAFF;">
+
+	 <div class="flex-master">
+	<div class="banner">
+				<img src="images/escudo.png" class="banner-logo" />
+				<div class="projectname">PayDay Help</div>
+
+		  </div>
+
+		  <div class="page-content">
+				<nav class="topic-outline">
+				<div class="topic-outline-header">En esta página:</div>
+					 <div class="topic-outline-content"></div>
+				</nav>
+		  <div class="splitter"></div>
+		  <div class="main-content">
+
+				<!-- Rendered Content -->
+				<article class="content-pane">
+				<div class="row">
+					<div class="column left just">
+					</div>
+						<div class="column center just">
+
+
+<header class="content-title">
+	 <img src=images\Libritos.png>
+Pruebas
+</header>
+
+<div class="content-body" id="body"><p>Los Datos principales del trabajador incluyen los siguientes campos:<p><p align="CENTER"><img src="images\mant\empleados\emp_principales.png"></p><p>Veamos los métodos de cálculo de ISR <p>
+<table border="1" width="90%">
+
+<tr>   
+  <th>Campo</th>   <th>Descripción</th>
+</tr>
+<tr>
+  <td>Código</td>  <td>Identifica al empleado en el sistema, cada uno tiene un código único y después de que se ha guardado, no puede ser modificado.  El trabajador debe tener siempre el mismo código, aunque lo recontratemos varias veces.
+
+<p>En PayDay los códigos no deben tener más de 6 caracteres y puede ser alfanumérico. Es preferible que no contengan signos de puntuación ni espacios intercalados. </p>
+<p>Si su empresa no tiene una codificación establecida, recomendamos que el código esté integrado por las tres primeras letras del apellido del empleado, seguido de un número secuencial de tres posiciones. De  ésta forma podrá tener 999 opciones para trabajadores que sus primeras tres letras del apellido coincidan. </p>Ejemplo: 
+<br> ALO001, para  JUAN ALOMAR
+<br> AGU001, para  CARLOS AGUIRRE
+<br> AGU002, para  PEDRO AGUIRRE
+</tr>
+</td></tr>
+
+<tr>
+  <td>Nombre y Apellido</td>  <td>Es el nombre del trabajador, debe escribirse sin signos de puntuación.</td>
+</tr>
+<tr>
+  <td>Seguro Social</td> <td>Coloque el número de Seguro Social que le ha sido asignado al empleado en la Caja de Seguro Social, con sus respectivos guiones. En los casos en que éste número coincida con la cédula, coloque el número de cédula. </td>
+</tr>
+<tr>
+  <td>Cédula</td> <td> Coloque el número de cédula del trabajador, con sus respectivos guiones tal como aparece en el documento de identidad. Por ejemplo 8-1891-2222, E-8-18350 o PE-4-74.   Si el trabajador es extranjero y no tiene aún un número de cédula, coloque aquí el número de pasaporte.  Por ejemplo: P-592360341   
+</td>
+</tr>
+
+<tr>
+  <td>Es Pasaporte?</td> <td>  Debe activar ésta opción con un gancho <img align= middle src="images\botones\activado.png">, para indicar que el número que se ha digitado en el campo cédula, es un pasaporte; ya que será necesario para indicarlo así en la planilla Preelaborada de la CSS.</td>
+</tr>
+
+<tr>
+  <td>Ultima Ced. Reportada</td> <td> Debe ser el mismo número de cédula del empleado.  Si por error, se reporta a la CSS un número de cédula incorrecto, para la siguiente Preelaborada, no cambie éste valor, solo cambie el campo Cédula y PayDay se encargará de dar aviso a la CSS que hay cambio en el número de cédula del trabajador, en la siguiente Preelaborada.</td>
+</tr>
+
+<tr>
+  <td>DV</td>
+  <td>Dígito Verificador otorgado a cada persona por la Dirección General de Ingresos.  Se requiere para la preparación del Anexo 03. si no lo tiene, puede buscarlo en la página Web de la <a href="https://etax2.mef.gob.pa/etax2web/Login.aspx">Dirección General de Ingresos - DGI</a></td> 
+</tr>
+<tr>
+  <td Nowrap>Grupo de ISR y # de Dependientes</td>
+  <td>Estos dos campos conforman la clave de Impuesto Sobre la Renta del empleado.  Seleccione el grupo según corresponda y coloque la cantidad de dependientes que declara el trabajador. </td>
+</tr>
+<tr>
+  <td>Grupo de Pago</td>
+  <td>Seleccione de acuerdo a la frecuencia de pago, el grupo al que pertenece cada empleado, ya sea Semanal, Bisemanal, Quincenal o Mensual.</td>
+</tr>
+<tr>
+  <td>Status</td>
+  <td>Indica el estado actual del trabajador, ya sea Activo, de Vacaciones, Suspendido, de Licencia o Cesante.  Si coloca cesante, PayDay le solicitará la fecha en que fue liquidado.</td>
+</tr>
+<tr>
+  <td>Sucursal</td>
+  <td>La utilización de sucursales es opcional, se usa si se requiere crear una clasificación de los trabajadores a nivel superior de los departamentos,  nos permite imprimir la planilla dividida por sucursales  Para asignar al trabajador a una sucursal, ésta debe estar previamente creadas, vea <opciones>Mantenimiento | Sucursales</opciones>. </td>
+</tr>
+<tr>
+  <td>Departamento</td>
+  <td>Asignar a los trabajadores por departamentos, nos permite imprimir la planilla dividida por departamentos y así también obtener los totales de la misma. Para asignar al trabajador a un departamento, éstos deben estar creados con anterioridad, vea <opciones>Mantenimiento | Departamentos </opciones>.</td>
+</tr>
+<tr>
+  <td>Centro de Costo</td>
+  <td>Indica en que grupo se clasificarán los gastos del empleado, cuando se confeccione el Asiento Contable.  Para asignar al trabajador a su centro de costo, éste debe estar creado anticipadamente.</td>
+</tr>
+
+<tr>
+  <td>Tipo de Salario</td>
+  <td>Debe seleccionarse de acuerdo a lo pactado con el empleado, tal como conste en su contrato laboral = mensual o por hora.  Este campo tiene estrecha relación con el Salario Pactado, ya que si usted coloca que el salario pactado es B/.2.50 por Hora, debe colocar que el tipo de salario es Por Hora.</td>
+</tr>
+<tr>
+  <td>Tipo de Empleado</td>
+  <td>Indica la categoría del empleado = Permanente o Eventual.  Los empleados eventuales no se incluyen para los aportes al Fondo de Cesantía.</td>
+</tr>
+<tr>
+  <td>Salario Pactado</td>
+  <td>Debe reflejar el monto a pagar al empleado, y debe estar de acuerdo a su tipo de salario.  Si luego de grabar esta cantidad, requiere cambiarla, debe tomar la opción <opciones>Mantenimiento | Empleados | Cambiar Salarios</opciones>.</td>
+</tr>
+ <tr>
+  <td>Horas Base</td>
+  <td>Es la cantidad de horas regulares que el empleado debe trabajar de acuerdo a su grupo de pago.  Para los empleados quincenales o mensuales, que su salario ha sido pactado mensualmente, se calcula con la siguiente fórmula  <p><img src="images\mant\horas_base.bmp" align = left hspace=45></P>
+</td>
+</tr>
+<tr>
+  <td>Fecha de Ingreso</td>
+  <td>Indica la fecha en que el trabajador inicia labores en la empresa, de acuerdo a su contrato de trabajo.</td>
+</tr>
+</tr>
+<tr>
+  <td>Fecha de Vencimiento de Contrato</td>
+  <td>Si el empleado es eventual, PayDay calculará esta fecha a 3 meses después de su entrada a laborar.  Puede modificarla si el contrato tiene otra vigencia.</td>
+</tr>
+<tr>
+  <td>Fecha de Liquidación</td>
+  <td>Es la última fecha en que el trabajador cesó sus labores en la empresa.</td>
+</tr>
+<tr>
+<td>Método de Cálculo de ISR</td>
+  <td>PayDay cuenta con diversos métodos para calcular el I.S.R. veamos: 
+<ul>
+<li><b>Promedio</b>Con éste método PayDay obtiene el promedio de los salarios devengados y lo proyecta por los meses que falten en el año actual (Incluyendo el XIII Mes).  De esta forma determina el total que devengará en el año, para luego calcular la renta total a descontar anual y por último, la que se descontará en la planilla actual. 
+
+<li><b>Inmediato</b> Es recomendable para cuando hay ingresos adicionales, que no son pagados con regularidad -como Bonos o Participación en las Utilidades.  PayDay calculará el ingreso anual y realizará el descuento total de la renta que conlleve el recibir ese ingreso adicional, para no prorratearlo durante el resto del año. 
+
+<li> <b>Tabla</b> Se basa en la aplicación exacta de las Tablas de Retenciones de Impuesto Sobre la Renta, de la DGI.  Utiliza el concepto que el total de salarios del mes en curso, es igual a todos los demás meses del año.
+
+<li> <b>Tabla Modificada </b>Es una variación de PayDay al método Tabla.  Su diferencia radica en que no asume que el ingreso adicional que se recibe en la(s) primera(s) planilla(s) del mes lo volverá a recibir en la(s) última(s) planilla(s) del mes.  Por ello, cuando se realiza la primera planilla, proyecta para la segunda, solo el salario base, no incluye el ingreso adicional -en la proyección-.
+
+<li> <b>Fijo </b> Con éste método el  usuario indica al sistema, cuanto descontar de ISR.
+
+<li> <b>ISR Fijo de GtoRep</b> Permite asignar un valor fijo que se descuente de ISR del Gasto de Representación. 
+
+<li> <b>Adicional</b>  Es un campo para colocar un valor adicional que se requiera descontar de ISR al trabajador.  Trabaja en conjunto con los demás métodos, excepto con el Fijo, que lo ignora.
+</ul>
+
+</td>
+</tr>
+</table>
+<br>
+</div>
+						</div>
+				</div>
+				</article>
+					 <hr />
+					 <div><a href="http://www.payday.com.pa"><img width=10% align=right src="images/logo.png"/></a></div>
+				<small>
+						  &copy; Sosa y Cía, S.A., 1996-2020 &bull;
+						  Última actualización: 01/28/20
+						  <br />
+					 </small>		
+				<br class="clearfix" />
+					 <br />
+					 <!-- End Rendered Content -->
+				</div>
+		  </div>		  
+	 </div>
+
+
+<div style="position: absolute; left: 0; bottom: 0; padding: 8px; background-color: #333; color: white; display:block !important; font-size: 11pt; border-radius-top-right: 3px; box-shadow: 3px 3px 8px #535353;opacity: 0.87" data-id="hbp">	
+	<a href="http://helpbuilder.west-wind.com/" target="_helpbuilder">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAFTklEQVR4Xt3TW2wcZxnG8f83M7szs7sz68M6PgUrbp0El7ZJG1Kq1LiyAmqIDaEpBkFUKRI0SE2LlEr0AirccNEUqghRJECUcugFbWQQIXCRCCiqiB1aQkSjOE5iJ44TH2Lv2uvd2eOcPnIRS16pXCAhLvjdvO/V+1w8evmfO3bsqHn69NctKRH8FwiAAwcORPZ/1ntmY2f1y8mEu1lVAwEiL+CkUNXvdu3ZoCwtVvcFaD2ReCLS/+LnYlMnz/s3zlw7byXiJzvvT/z6Dz/5aokPIIaGhrTeLePH+x72+4WgFhBK4fcfNNRTp6Milqzj3v4d7HzhcbwVh5FXTjF95jqy6i/UWe7Q4IB47fDhwyFrKLqYeKLno97qcULJWCYbHXU9CYAipHbkOcT2Jx6h56ldbNv3KF4+xK2EjJ+6gKqC61aa09nwxz8frgwPDByI1QTc0+l+MhoRAEiJFGpkz859Ky8f+12GVXd3SLp2dNO6qZWgUKS8lEXTY3xx+Fk2fOp+orZJWIVSIbL3/Sv68ODgoModWiq5/dB7l8QLABE1G3zn6Gi8577CG7v62lh1I2tTyuVRQx/fd9ECF7/qYthxtg4+xPzFa7hhldJiAbdq7h49V/c8cARAsMbzzz6+/uB+OdLRpnRwx/yyzosnHmLGb8NIJrCUADNmYN7eg1gdYcLi9SdfYcund/DuW6MgBBqV4uZ1E3dfuPD2gsIaW+91v7Z6XEoYm27lz+e3c7sT3EKZas6hXKiQ9Jb5eJtHPDfDzF9GeGD3VvLpDCglkCV8ZHzesQ8CaKyhm2p3GALA2bEIvzoRJZGsUC98mpIQr1Ox4grrGyS9m0v4XoTZOZWxv/2DhVkHEYJAwVACwjC2B/iWYI2u7p2vrd9411fK5YAmK0JDXGEpD4rViIwlWAl1ohGFhA4tSYEZ11kJDEqGzdvfexOvHAAKughRVN/t7dlqaazx1D7jvq4NWbxKFRWD9851cH0uC64DpZD2VptiqFIoCG56Klq+imqCcAPMtnqyV2eoV3y0iETTiKZSTnNNB9u6Zf3enSFf6I+w40GfDe0pJBpGNIrjVBifzFDOOrQkJM1WiKmGVEouN8enyVydpG3jhwiisD7l8eFuGzBrOxCKyiqpRDj+zjSBiJKrhDSYGreKPgsZh3S2gG6aJOtM6u2QSvYSW7p0DHuJhk90cVdDDiPVXklPpW8J1vjNG3t+v7nLHljOeSxlVV76WQuaKvFEBA2JrqtkClVk4OJWXEw7jqZH8dwyE++8i2YbCFmhyQIjqv1z/NLIA0rNH7xa//RLv9zkP/dqJy8f66ZY9licm+PG+EWKrsQPIRWLcuvyJNPnzjIzdoGFqSnSU9cJ/RKpthS6ZbG0VEJf13kcoCbg6tlf3Hz/cuatpkabhoTEXtdKPlskOzfPxJkRVpwqjuNgqUWkhEJ6gdzsLG7eQWiC0u3pzM+CYThNjc0/AtCoxbKz/M2Gcv1n3FC31ZUrtNS7NFsWxaLP8vWLtG/qpuRrtDeZLC47qJqGbteBrpJfvEXgl4k3dh/542+PLgIIPsA9jz4z2NDU8mYuW1Yv//VPqGoEOyEwDAiR5PKScrlKY1Lg+z45x0NKj1B6JJqbTzzWc2jv8PDng9qAWjw88O0vZaav/PTm5QkTBCAJZYBEAgABAlCVEMsUVN0qFczhjraeJycnf1DlDsG/x5a+pz8yf2Xyh+VCtdctV5BIpJRIQgQ+AMgQFNIR0/pGKTf6OiD5Tz24+/DH7MZd348l+/5uWL1pM/5INmb1Xk3U952wmh7b37ptKMb/rX8BL2lNNiGFZBEAAAAASUVORK5CYII="
+ style="float: left; margin-right: 15px;"/>
+	</a>
+	This page was generated by the shareware version of <a href="http://helpbuilder.west-wind.com/" target="_helpbuilder" style="color: cornsilk;font-weight: bold;">West Wind Html Help Builder</a>.	
+</div></body>
+</html>

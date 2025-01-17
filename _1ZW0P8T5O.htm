@@ -1,0 +1,36 @@
+
+	
+<html>
+<head>
+<title>Décimo III</title>
+<LINK rel="stylesheet" type="text/css" href="templates/wwhelp.css">
+</head>
+<body topmargin=0 leftmargin=0>
+<table border=0 width="100%" bgcolor="lightblue" class="banner">
+<tr><td valign="center">
+<span style="font:8pt Verdana"><i>PayDay Help</i></span></td></tr>
+<tr><td><span style="font:10pt Verdana"><b>Décimo III</b></span>
+</td></tr>
+</table>
+<p>
+
+<div style="margin-left:10pt;margin-right=10pt">
+
+El Décimo Tercer Mes es una bonificación especial calculada sobre la base de un día de salario por cada once (11) días trabajados.  Se incluyen los valores pagados en conceptos de salarios, enfermedad, vacaciones y licencias y debe pagarse en tres partidas proporcionales, el 15 de abril, 15 de agosto y 15 de diciembre de cada año.  (Decreto No. 221 de 18 de noviembre de 1971).   <p>Hacer la planilla de Décimo Tercer Mes es super fácil,  veamos:<p><span class="header3">1. Verificar que la partida de XIII Mes a pagar, sea la correcta</span>. Para ello, veamos el campo Ultimo XIII Mes pagado, que se encuentra en Mantenimiento|Canfiguración|Datos Generales de la Cía.  Este valor se actualiza automáticamente, cada vez que se postea una planilla de XIII Mes, por lo que una vez inicializado, no debería necesitar cambios manuales; sin embargo, no está de más chequearlo antes de hacer la planilla. <p><span class="header3">2. Tome la opción <span class="labels">Informes|Empleados|Detalle para XIII Mes</span></span>, imprima el reporte y revise los datos.  <br><img src="images\Planillas\decimo\detalleparadecimo.png"><p>Como se puede apreciar, éste informe muestra los salarios que el trabajador ha ganado en cada uno de los meses involucrados en la partida a pagar, luego los suma y lo presenta en la columna Este Acumulado, la siguiente columna muestra cuánto sería el XIII Mes basado en Este Acumulado y por último, muestra el Acumulado Según el archivo, que es el valor que realmente se utilizará para el pago. <p>Por lo tanto, las columnas <u>Este Acumulado</u> y <u>Acumulado según el Archivo</u> siempre deberían coincidir, excepto en los casos en que en el décimo anterior se hubiese pagado por adelantado, utilizando proyección.  <span class="header1">En este caso sólo corresponde verificar que las diferencias sean los valores que quedaron pendientes por pagar o descontar en el décimo anterior, luego que se ajustó la proyección. <br></span><br>Si luego de la revisión se detectan diferencias y no son por que se hubise trabajado con proyección, es porque se registró pagos de salario manualmente, sin que PayDay hiciera las planillas.  Recuerde que si incluyen valores manualmente en la pantalla de ajustes a los acumulados, éstos no se suman automáticamente en los campos de Salario Acumulado para calcular Vacaciones y Décimo Tercer Mes. <p><span class="header3">3. Recalcular Acumulados para Décimo Tercer Mes</span><br> Es un proceso que modifica automáticamente el acumulado para XIII mes tomando todos los registros de las planillas realizadas dentro del periodo que cubre la partida de XIII Mes a pagar, los totaliza y guarda en los campos de Salario y  Gasto de Representación acumulados para XIII Mes.<p>Esta opción la encuentra en Otros|Otros Procesos|Recalcular Acumulados XIII Mes, coloque las fechas que comprenden el décimo a pagar y revise los cambios que se efectuarían si decide o no recalcular. <br> <br><span class="header3">4. Generar la planilla de Décimo Tercer Mes</span><p><table  border="1" width="90%"><tr><td><img src="images\Planillas\decimo\generacion.png"></td><td ><ol>Veamos las variables que interfieren en la generación del DécimoTercer Mes<ol><li> Verifique si la partida a pagar concuerda con la que se muestra en su pantalla, de igual forma revise que las fechas del mismo sean las correctas.<li> Indique si desea proyectar el salario base de los empleados hasta la fecha indicada.  Esta es una característica especial de PayDay, que permite hacer una proyección del salario base del trabajador e incluirlo en el pago del XIII Mes.   Esto nos ayuda a pagarlo fácilmente por adelantado y al hacerlo, es posible que cuando llegue la fecha en que realmente se debió pagar, encontremos algunos casos en que se les pagó décimo de mas o de menos, en ese momento, podemos entonces pagar la diferencia pendiente o si se prefiere, dejarla en el  acumulado para la próxima partida.<li> Seleccione <img src="images\Botones\OK.png"> para  Generar o <img src="images\Botones\Cancelar1.png"> para salir sin generar.</ol></td></tr></table><p><span class="header3">5. Mejoras al Décimo Tercer Mes</span><p><img src="images\Planillas\decimo\mejora.png"><p>En la pantalla podemos revisar los valores a pagar en Décimo Tercer del Salario, del Gasto de Representación y tambíen podemos agregar "mejoras al décimo tercer mes", que no son más que bonificaciones especiales que la empresa quisiera entregar a los trabajadores, en el pago del XIII Mes.  Este campo no debe utilizarse para incluir otro ingreso que no sea específicamente mejoras al décimo, porque entonces no se le daría el tratamiento apropiado.<p>Como se puede apreciar en la figura anterior, también podemos revisar y/o modificar el Ingreso Proyectado que se está considerando para cada trabajador. <br>Luego de la revisión requerida, continuamos con los demás pasos de la planilla, de igual forma como lo hacemos con una planilla regular, tomamos Borrador, luego Vouchers, Informes al Banco, Respaldo de Archivos y Cheques Postear.<br>
+<p>
+<table border="0" cellpadding="3" width="99%" class=".body">
+
+  
+
+  
+</table>
+
+
+
+
+</div>
+<hr>
+<span class="body"><small>Last Updated: <i>01/26/07</i></small></span>
+<p>&nbsp;<br></p>
+</body>
+</html>

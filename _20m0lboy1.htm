@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+<head> 
+		<meta charset="utf-8" /> 
+	 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	 	<title>Datos de las Vacaciones - PayDay Help</title>	 
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+		<!-- <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js#startOpened,overrideConsole"></script> -->
+	<link rel="stylesheet" type="text/css" href="templates/scripts/bootstrap/dist/css/bootstrap.min.css" />	
+	<link rel="stylesheet" type="text/css" href="templates/scripts/fontawesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="templates/wwhelp.css" />
+
+	 	<script src="templates/scripts/jquery/jquery.min.js"></script>	
+
+		<script src="templates/scripts/highlightjs/highlight.pack.js"></script>
+	<script src="templates/scripts/highlightjs-badge.min.js"></script> 
+	<link href="templates/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+  	<script src="templates/scripts/ww.jquery.min.js"></script>
+
+	 <script src="templates/scripts/wwhelp.js"></script>
+
+	<topictype value="Topictype" />
+	<script>		  
+	$(document).ready( function() {
+		helpBuilder.initializeLayout();
+		// expand all top level topics
+		setTimeout( helpBuilder.tocExpandTop, 2);
+	});
+	</script>
+</head>
+<body style="background-color:#F5FAFF;">
+
+	 <div class="flex-master">
+	<div class="banner">
+				<img src="images/escudo.png" class="banner-logo" />
+				<div class="projectname">PayDay Help</div>
+
+		  </div>
+
+		  <div class="page-content">
+				<nav class="topic-outline">
+				<div class="topic-outline-header">En esta página:</div>
+					 <div class="topic-outline-content"></div>
+				</nav>
+		  <div class="splitter"></div>
+		  <div class="main-content">
+
+				<!-- Rendered Content -->
+				<article class="content-pane">
+				<div class="row">
+					<div class="column left just">
+					</div>
+						<div class="column center just">
+
+
+<header class="content-title">
+	 <img src=images\Topic.png>
+Datos de las Vacaciones
+</header>
+
+<div class="content-body" id="body"><p><p align="CENTER"><img src="images\Planillas\Vacaciones\datosdevacac.png"></p><p>En esta pantalla es donde vamos a trabajar el pago de las vacaciones.  El sistema muestra los cálculos realizados de acuerdo a los datos proporcionados. Veremos en detalle cada uno de los datos involucrados. <p><span class="header3">1. Vacaciones Disponibles</span><p>Nos indica en tiempo y en dinero, los días que el empleado tiene disponibles para tomar sus vacaciones.  Estos campos no se pueden modificar directamente en esta pantalla, son valores que PayDay calcula tomado como referencia las fechas de Vacaciones <b>Dinero pagado hasta</b> y <b>Tiempo tomado hasta</b>, que se encuentran en <i>Mantenimiento|Empleados|Datos generales del Empleado, pestaña Configuración</i>.<p>Ejemplo:   Una persona que inicia labores el 1 de enero de 2018, a los once meses tiene derecho a tomar treinta días de vacaciones; por ello, en Noviembre, cuando realizamos la planilla de vacaciones decimos:   Vacaciones correspondientes por el tiempo trabajado del 1 de enero de 2018 al 30 de noviembre de 2018.<br>		<br>Con este ejemplo, en el campo Tiempo tomado hasta debemos colocar 30/11/2018. Así cuando corresponda realizar la siguiente planilla de vacaciones, PayDay comenzará a contar desde ésta fecha y de esa forma se encargará de ir llevando el control del tiempo de vacaciones que el empleado tiene disponible.  Regularmente las fechas son las mismas en los dos campos, sólo si el empleado no toma la misma cantidad de tiempo y dinero de vacaciones, pueden variar; es decir, si se le pagan 30 días y toma libre sólo 15 días.<p><span class="header3">2. Vacaciones que se van a Tomar </span><p>En esta sección es donde debemos indicar lo que realmente se va a pagar al empleado en vacaciones tanto en <b>tiempo</b> como en <b>dinero</b>.  Revise y cambie de ser necesario los valores que tiene en los siguientes campos:<br>
+<table  border="1" width="90%">
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+</tr>
+<tr>
+<td nowrap>Periodo Trabajado	</td>
+<td >Corresponde al tiempo trabajado por el cual se está pagando los días de vacaciones de la planilla en proceso.  Se toma de referencia la fecha hasta la cual se le ha pagado vacaciones en Dinero y a partir de ella, se calcula la fecha final, basado en el tiempo que se le pagará.  
+</tr>
+<tr>
+<td nowrap>Periodo Libre</td>
+<td >Inicio:  El primer día libre de vacación.  Es el día calendario siguiente al último día de salario pagado al empleado.  Hasta aquí se le indica al sistema la fecha hasta la cual al empleado se le deben pagar sus vacaciones, de acuerdo a los meses que tiene pendiente de pago.  Normalmente, el sistema le presentará la fecha en que se está actualmente. <p>Final:	Indica el día en que terminan las vacaciones, calculada de acuerdo al tiempo a tomar.</p></td>
+</tr>
+<tr>
+<td nowrap>En Dinero</td>
+<td >En éste campo se indica la cantidad de días que se van a pagar en Dinero al trabajador. Puede colocar 15 días, o por ejemplo 30 días que hacen un mes.  Al cambiar éste valor, PayDay recalcula la fecha final del Periodo Trabajado.</td>
+</tr>
+<tr>
+<td >En Tiempo</td>
+<td >En éste campo se indica cuantos días la persona va a tomar libre realmente en concepto de vacaciones.  Regularmente es igual al tiempo pagado en dinero.  Al cambiar éste valor, PayDay recalcula la fecha final del Período Libre que tendrá el trabajador. </td>
+</tr>
+</table>
+<p>Recuerde que no necesita cambiar las fechas del Período Trabajado y el Período Libre, ya que ellas varían automáticamente conforme se van realizando los cambios en los datos a pagar; sin embargo, si ésta no coincide con lo real, cambie la fecha inicial y PayDay calculará la final.<p><span class="header3">3. OJO!!   Falta pagar una Planilla</span><p>Es una opción que le permite indicar que está pagando las vacaciones a un empleado pero que aún le hace falta un pago regular, ya sea  semanal, bisemanal, quincenal, o mensual. <p>Al activarla, PayDay hace lo siguiente:<br>En la planilla de vacaciones, realiza los descuentos del empleado para los acreedores del próximo período.  Es decir, no afecta las deducciones del mes en curso (el campo descontado en el mes); sino que toma los descuentos del mes siguiente y luego de postear las Vacaciones, deja el estatus del empleado "Activo" por una planilla regular más.<p>De esta forma, el empleado se incluirá en la siguiente planilla regular y le hará los descuentos que tenga pendiente para sus acreedores en el mes en curso, y al postear esta planilla regular, cambiará su estatus a "Vacaciones".<p><span class="header3">4.	Acreedores </span><br>Realizar descuentos de Acreedores, cuantas veces.<br>En Vacaciones podemos indicar, si se requiere efectuar deducciones a los empleados con respecto a sus deudas con los acreedores y cuántas veces debe hacerse este descuento.   Esta opción es muy útil, debido a que en ocasiones, dependiendo del tiempo que el trabajador va a estar libre, es necesario cambiar la cantidad de deducciones que se requiera efectuar. 				<p>Dependiendo del grupo de pago al que pertenece el empleado, indique la cantidad de deducciones a realizar, por ejemplo 2, para dos quincenas o 4, para cuatro semanas. <p><span class="header3">5.	Ingreso que acumula para Vacación</span><p>Recordemos que para pagar vacaciones se realiza el cálculo del promedio de los últimos once meses,  tomados en cuenta desde la fecha del último día pagado al empleado hacia atrás.  En ésta pantalla se muestran las fechas utilizadas para éste cálculo y también los montos devengados por el empleado en cada uno de estos meses.<br>En virtud de que algunas empresas requieren variar las fechas de éste cálculo, hemos habilitado los campos Ingreso que acumula para vacaciones Desde y Hasta, que le permitirán cambiar los meses considerados en el cálculo. <br>Si el valor de algún mes no concuerda con sus cálculos, tome la opción Ajuste a los Acumulados y verifique los ingresos reales recibidos por éste o el informe de salarios por año donde se muestran los ingresos que ha tenido la persona.<p>En esta pantalla se ilustra el resumen del cálculo de las vacaciones, allí encontrará la siguiente información:<br> <br>a.  Total de los últimos 11 meses:  muestra la suma total de los salarios devengados por el trabajador.<br>		<br>b.  Promedio de los últimos 11 meses: Es el promedio de los salarios devengados por el empleado en los últimos once meses trabajados y que se compara con el salario base.<p>c.  Ultima Base Mensual:  Este es el salario que tiene el empleado actualmente.  Si se le realizó aumento salarial, el monto a pagar en vacaciones no pueden ser menor que esta cantidad. <p>d.  Montos Calculados:  Es el valor que el programa ha calculado que se debe pagar de vacaciones y para obtenerlo, realiza lo siguiente: <br><ul><li> Se hace una comparación entre el promedio de los últimos once meses y el último salario base mensual, para identificar cuál de los dos es el mayor. <br><li> Una vez seleccionado el mayor, se multiplica por los días o meses a pagar. <br></ul><p><span class="header3">6.     Monto a Pagar</span><br>Inicialmente es la misma cantidad que el programa ha calculado que se le debe pagar al empleado (montos calculados); sin embargo es un campo abierto, que usted puede modificar si lo decide, luego de efectuar sus propios cálculos.<p><span class="header3">7. Informe</span><br>Nos presenta un informe muy completo que ilustra el cálculo completo de las vacaciones que se está realizando.<p><p align="CENTER"><img src="images\Planillas\Vacaciones\informe_vac.png"></p>
+</div>
+						</div>
+				</div>
+				</article>
+					 <hr />
+					 <div><a href="http://www.payday.com.pa"><img width=11% align=right src="images/logo.png"/></a></div>
+				<small>
+						  &copy; Sosa y Cía, S.A., 1996-2025 &bull;
+						  Última actualización: 01/03/22
+						  <br />
+					 </small>		
+				<br class="clearfix" />
+					 <br />
+					 <!-- End Rendered Content -->
+				</div>
+		  </div>		  
+	 </div>
+
+
+<div style="position: absolute; left: 0; bottom: 0; padding: 8px; background-color: #333; color: white; display:block !important; font-size: 11pt; border-radius-top-right: 3px; box-shadow: 3px 3px 8px #535353;opacity: 0.87" data-id="hbp">	
+	<a href="http://helpbuilder.west-wind.com/" target="_helpbuilder">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAFTklEQVR4Xt3TW2wcZxnG8f83M7szs7sz68M6PgUrbp0El7ZJG1Kq1LiyAmqIDaEpBkFUKRI0SE2LlEr0AirccNEUqghRJECUcugFbWQQIXCRCCiqiB1aQkSjOE5iJ44TH2Lv2uvd2eOcPnIRS16pXCAhLvjdvO/V+1w8evmfO3bsqHn69NctKRH8FwiAAwcORPZ/1ntmY2f1y8mEu1lVAwEiL+CkUNXvdu3ZoCwtVvcFaD2ReCLS/+LnYlMnz/s3zlw7byXiJzvvT/z6Dz/5aokPIIaGhrTeLePH+x72+4WgFhBK4fcfNNRTp6Milqzj3v4d7HzhcbwVh5FXTjF95jqy6i/UWe7Q4IB47fDhwyFrKLqYeKLno97qcULJWCYbHXU9CYAipHbkOcT2Jx6h56ldbNv3KF4+xK2EjJ+6gKqC61aa09nwxz8frgwPDByI1QTc0+l+MhoRAEiJFGpkz859Ky8f+12GVXd3SLp2dNO6qZWgUKS8lEXTY3xx+Fk2fOp+orZJWIVSIbL3/Sv68ODgoModWiq5/dB7l8QLABE1G3zn6Gi8577CG7v62lh1I2tTyuVRQx/fd9ECF7/qYthxtg4+xPzFa7hhldJiAbdq7h49V/c8cARAsMbzzz6+/uB+OdLRpnRwx/yyzosnHmLGb8NIJrCUADNmYN7eg1gdYcLi9SdfYcund/DuW6MgBBqV4uZ1E3dfuPD2gsIaW+91v7Z6XEoYm27lz+e3c7sT3EKZas6hXKiQ9Jb5eJtHPDfDzF9GeGD3VvLpDCglkCV8ZHzesQ8CaKyhm2p3GALA2bEIvzoRJZGsUC98mpIQr1Ox4grrGyS9m0v4XoTZOZWxv/2DhVkHEYJAwVACwjC2B/iWYI2u7p2vrd9411fK5YAmK0JDXGEpD4rViIwlWAl1ohGFhA4tSYEZ11kJDEqGzdvfexOvHAAKughRVN/t7dlqaazx1D7jvq4NWbxKFRWD9851cH0uC64DpZD2VptiqFIoCG56Klq+imqCcAPMtnqyV2eoV3y0iETTiKZSTnNNB9u6Zf3enSFf6I+w40GfDe0pJBpGNIrjVBifzFDOOrQkJM1WiKmGVEouN8enyVydpG3jhwiisD7l8eFuGzBrOxCKyiqpRDj+zjSBiJKrhDSYGreKPgsZh3S2gG6aJOtM6u2QSvYSW7p0DHuJhk90cVdDDiPVXklPpW8J1vjNG3t+v7nLHljOeSxlVV76WQuaKvFEBA2JrqtkClVk4OJWXEw7jqZH8dwyE++8i2YbCFmhyQIjqv1z/NLIA0rNH7xa//RLv9zkP/dqJy8f66ZY9licm+PG+EWKrsQPIRWLcuvyJNPnzjIzdoGFqSnSU9cJ/RKpthS6ZbG0VEJf13kcoCbg6tlf3Hz/cuatpkabhoTEXtdKPlskOzfPxJkRVpwqjuNgqUWkhEJ6gdzsLG7eQWiC0u3pzM+CYThNjc0/AtCoxbKz/M2Gcv1n3FC31ZUrtNS7NFsWxaLP8vWLtG/qpuRrtDeZLC47qJqGbteBrpJfvEXgl4k3dh/542+PLgIIPsA9jz4z2NDU8mYuW1Yv//VPqGoEOyEwDAiR5PKScrlKY1Lg+z45x0NKj1B6JJqbTzzWc2jv8PDng9qAWjw88O0vZaav/PTm5QkTBCAJZYBEAgABAlCVEMsUVN0qFczhjraeJycnf1DlDsG/x5a+pz8yf2Xyh+VCtdctV5BIpJRIQgQ+AMgQFNIR0/pGKTf6OiD5Tz24+/DH7MZd348l+/5uWL1pM/5INmb1Xk3U952wmh7b37ptKMb/rX8BL2lNNiGFZBEAAAAASUVORK5CYII="
+ style="float: left; margin-right: 15px;"/>
+	</a>
+	This page was generated by the shareware version of <a href="http://helpbuilder.west-wind.com/" target="_helpbuilder" style="color: cornsilk;font-weight: bold;">West Wind Html Help Builder</a>.	
+</div></body>
+</html>

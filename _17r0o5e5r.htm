@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+<head> 
+		<meta charset="utf-8" /> 
+	 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	 	<title>Configuración - Empleado - PayDay Help</title>	 
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+		<!-- <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js#startOpened,overrideConsole"></script> -->
+	<link rel="stylesheet" type="text/css" href="templates/scripts/bootstrap/dist/css/bootstrap.min.css" />	
+	<link rel="stylesheet" type="text/css" href="templates/scripts/fontawesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="templates/wwhelp.css" />
+
+	 	<script src="templates/scripts/jquery/jquery.min.js"></script>	
+
+		<script src="templates/scripts/highlightjs/highlight.pack.js"></script>
+	<script src="templates/scripts/highlightjs-badge.min.js"></script> 
+	<link href="templates/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+  	<script src="templates/scripts/ww.jquery.min.js"></script>
+
+	 <script src="templates/scripts/wwhelp.js"></script>
+
+	<topictype value="Topictype" />
+	<script>		  
+	$(document).ready( function() {
+		helpBuilder.initializeLayout();
+		// expand all top level topics
+		setTimeout( helpBuilder.tocExpandTop, 2);
+	});
+	</script>
+</head>
+<body style="background-color:#F5FAFF;">
+
+	 <div class="flex-master">
+	<div class="banner">
+				<img src="images/escudo.png" class="banner-logo" />
+				<div class="projectname">PayDay Help</div>
+
+		  </div>
+
+		  <div class="page-content">
+				<nav class="topic-outline">
+				<div class="topic-outline-header">En esta página:</div>
+					 <div class="topic-outline-content"></div>
+				</nav>
+		  <div class="splitter"></div>
+		  <div class="main-content">
+
+				<!-- Rendered Content -->
+				<article class="content-pane">
+				<div class="row">
+					<div class="column left just">
+					</div>
+						<div class="column center just">
+
+
+<header class="content-title">
+	 <img src=images\Topic.png>
+Configuración - Empleado
+</header>
+
+<div class="content-body" id="body"><p><p align="CENTER"><img src="images\mant\Empleados\emp_configuracion.png"></p><p>
+<table border="1" width="90%">
+<tr> <th>Campo</th>  <th>Descripción</th> </tr>
+
+<tr>
+  <td>Otros Números del Empleado</td>
+  <td>Algunas entidades asignan a los empleados un código para referenciarlos en sus sistemas.  Por ejemplo los bancos, para pagos de Depósito Directo o ACH y Fondo de Cesantía, también tenemos el número de Empleado en la Caja de Seguro Social, que identifica a cada trabajador en las Preelaboradas mecanizadas.  Para éste caso, PayDay asigna automáticamente el número cuando creamos al trabajador; sin embargo si antes de usar PayDay los empleados ya tenían asignado un número, debe colocar el mismo. Y por último, tenemos una subcuenta del Mayor General asignada al empleado, el cual es utilizado para algunas interfases "especiales" con programa contables.</td>
+</tr>
+
+<tr>
+  <td>Es Jefe de Cuadrilla / Calcular Bonificación (12%)</td>
+  <td>En la Convención Colectiva CAPAC - SUNTRACS, se reglamenta que a los trabajadores de la construcción, cuando realicen las labores de Jefe de Cuadrilla, se le debe dar una bonificación especial del 12% de su salario.  Con ésta opción le indicamos a PayDay que realice automáticamente el cálculo de ésta bonificación y se le pague al trabajador como Bonificación en sus planillas regulares de pago.  </td>
+</tr>
+
+<tr>
+  <td>Imprimir Etiqueta Tarjeta Tiempo</td>
+  <td>Incorpora a los empleados a un reporte especial que imprime los nombres y fechas para colocar en las tarjetas de marcar.</td>
+</tr>
+
+<tr>
+  <td>Hace Declaración de ISR</td>
+  <td>Active esta opción si el trabajador presenta su propia declaración de ISR, de esta forma en el Anexo 03, saldrá la palabra DECLARA.</td>
+</tr>
+<tr>
+  <td>Pertenece al Sindicato</td>
+  <td>Marque sólo si existe un sindicato laboral en la empresa y el trabajador pertenece al mismo.</td>
+</tr>
+<tr>
+  <td>Porc. Max.de los Descuentos</td>
+  <td>El artículo 161 del código de trabajo, especifica que el total de deducciones de un trabajador no debe exceder el 50% del salario, salvo que se trate de pensiones alimenticias.  Este campo tiene inicialmente ese valor, pero se permite al usuario cambiarlo, si lo requiere. </td>
+</tr>
+<tr>
+  <td>Fecha Ult. Aumento</td>
+  <td>Payday guarda la fecha en que se realizó el último aumento salarial, de cada trabajador.</td>
+</tr>
+<tr>
+  <td>Hrs. St. Acum en Semana</td>
+  <td>Aquí PayDay guarda la cantidad de horas de sobretiempo que el empleado lleva acumuladas -en la última semana de la planilla anterior- para verificar si en la próxima planilla se pasará de más de nueve horas extras, en la misma semana. </td>
+</tr>
+<tr>
+  <td>Año Actual </td> <td>Días sin contrato: Payday calcula este valor de acuerdo a la fecha de ingreso.  Son exactamente los días calendarios que el trabajador no ha estado laborando en la empresa.  
+ <p>  Días Ausente x Licencia, Riesgo: Se colocan los días que el trabajador no ha estado en la empresa por alguno de éstas causas. </p></td>
+</tr>
+<tr>
+  <td>Vacaciones </td><td><b>Tiempo tomado hasta:</b>  Es la fecha final del tiempo trabajado por el empleado y por el cual ya le hemos cancelado sus vacaciones.
+  <p> <b>Dinero pagado hasta:</b>  Es la fecha final del periodo trabajado por el cual ya hemos cancelado el dinero de vacaciones al empleado.</p></td>
+</tr>
+
+<tr>
+  <td>Recibe Vale Panamá</td><td>Al incluir al trabajador en esta opción, PayDay le prepara un reporte que le indica el valor que le corresponde al trabajador como bono de VALE PANAMA.   De acuerdo al rango de fechas seleccionadas, se toman los ingresos del trabajador y se calcula el 10% para obtener el total del Vale.  El Informe lo encontrará en <i>Informes|Empleados|Vale Panamá</i>.
+</td>
+</tr>
+
+<tr>
+  <td>Liquidación de Marinos</td><td>Seleccione esta opción si al empleado se le debe pagar </p></td>
+</tr>
+</table>
+<p><br><b>Importante:</b><br>En esta pantalla, hay algunos valores que solo pueden ser  modificados, por el usuario SUPERVISOR, estos campos son: Porcentaje Máximo de los Descuentos, Días sin contrato y Días Ausente por Licencia o Riesgos Profesionales del  año actual.<br> <br>
+</div>
+						</div>
+				</div>
+				</article>
+					 <hr />
+					 <div><a href="http://www.payday.com.pa"><img width=11% align=right src="images/logo.png"/></a></div>
+				<small>
+						  &copy; Sosa y Cía, S.A., 1996-2025 &bull;
+						  Última actualización: 08/04/21
+						  <br />
+					 </small>		
+				<br class="clearfix" />
+					 <br />
+					 <!-- End Rendered Content -->
+				</div>
+		  </div>		  
+	 </div>
+
+
+<div style="position: absolute; left: 0; bottom: 0; padding: 8px; background-color: #333; color: white; display:block !important; font-size: 11pt; border-radius-top-right: 3px; box-shadow: 3px 3px 8px #535353;opacity: 0.87" data-id="hbp">	
+	<a href="http://helpbuilder.west-wind.com/" target="_helpbuilder">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAFTklEQVR4Xt3TW2wcZxnG8f83M7szs7sz68M6PgUrbp0El7ZJG1Kq1LiyAmqIDaEpBkFUKRI0SE2LlEr0AirccNEUqghRJECUcugFbWQQIXCRCCiqiB1aQkSjOE5iJ44TH2Lv2uvd2eOcPnIRS16pXCAhLvjdvO/V+1w8evmfO3bsqHn69NctKRH8FwiAAwcORPZ/1ntmY2f1y8mEu1lVAwEiL+CkUNXvdu3ZoCwtVvcFaD2ReCLS/+LnYlMnz/s3zlw7byXiJzvvT/z6Dz/5aokPIIaGhrTeLePH+x72+4WgFhBK4fcfNNRTp6Milqzj3v4d7HzhcbwVh5FXTjF95jqy6i/UWe7Q4IB47fDhwyFrKLqYeKLno97qcULJWCYbHXU9CYAipHbkOcT2Jx6h56ldbNv3KF4+xK2EjJ+6gKqC61aa09nwxz8frgwPDByI1QTc0+l+MhoRAEiJFGpkz859Ky8f+12GVXd3SLp2dNO6qZWgUKS8lEXTY3xx+Fk2fOp+orZJWIVSIbL3/Sv68ODgoModWiq5/dB7l8QLABE1G3zn6Gi8577CG7v62lh1I2tTyuVRQx/fd9ECF7/qYthxtg4+xPzFa7hhldJiAbdq7h49V/c8cARAsMbzzz6+/uB+OdLRpnRwx/yyzosnHmLGb8NIJrCUADNmYN7eg1gdYcLi9SdfYcund/DuW6MgBBqV4uZ1E3dfuPD2gsIaW+91v7Z6XEoYm27lz+e3c7sT3EKZas6hXKiQ9Jb5eJtHPDfDzF9GeGD3VvLpDCglkCV8ZHzesQ8CaKyhm2p3GALA2bEIvzoRJZGsUC98mpIQr1Ox4grrGyS9m0v4XoTZOZWxv/2DhVkHEYJAwVACwjC2B/iWYI2u7p2vrd9411fK5YAmK0JDXGEpD4rViIwlWAl1ohGFhA4tSYEZ11kJDEqGzdvfexOvHAAKughRVN/t7dlqaazx1D7jvq4NWbxKFRWD9851cH0uC64DpZD2VptiqFIoCG56Klq+imqCcAPMtnqyV2eoV3y0iETTiKZSTnNNB9u6Zf3enSFf6I+w40GfDe0pJBpGNIrjVBifzFDOOrQkJM1WiKmGVEouN8enyVydpG3jhwiisD7l8eFuGzBrOxCKyiqpRDj+zjSBiJKrhDSYGreKPgsZh3S2gG6aJOtM6u2QSvYSW7p0DHuJhk90cVdDDiPVXklPpW8J1vjNG3t+v7nLHljOeSxlVV76WQuaKvFEBA2JrqtkClVk4OJWXEw7jqZH8dwyE++8i2YbCFmhyQIjqv1z/NLIA0rNH7xa//RLv9zkP/dqJy8f66ZY9licm+PG+EWKrsQPIRWLcuvyJNPnzjIzdoGFqSnSU9cJ/RKpthS6ZbG0VEJf13kcoCbg6tlf3Hz/cuatpkabhoTEXtdKPlskOzfPxJkRVpwqjuNgqUWkhEJ6gdzsLG7eQWiC0u3pzM+CYThNjc0/AtCoxbKz/M2Gcv1n3FC31ZUrtNS7NFsWxaLP8vWLtG/qpuRrtDeZLC47qJqGbteBrpJfvEXgl4k3dh/542+PLgIIPsA9jz4z2NDU8mYuW1Yv//VPqGoEOyEwDAiR5PKScrlKY1Lg+z45x0NKj1B6JJqbTzzWc2jv8PDng9qAWjw88O0vZaav/PTm5QkTBCAJZYBEAgABAlCVEMsUVN0qFczhjraeJycnf1DlDsG/x5a+pz8yf2Xyh+VCtdctV5BIpJRIQgQ+AMgQFNIR0/pGKTf6OiD5Tz24+/DH7MZd348l+/5uWL1pM/5INmb1Xk3U952wmh7b37ptKMb/rX8BL2lNNiGFZBEAAAAASUVORK5CYII="
+ style="float: left; margin-right: 15px;"/>
+	</a>
+	This page was generated by the shareware version of <a href="http://helpbuilder.west-wind.com/" target="_helpbuilder" style="color: cornsilk;font-weight: bold;">West Wind Html Help Builder</a>.	
+</div></body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+<head> 
+		<meta charset="utf-8" /> 
+	 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	 	<title>Misceláneos - PayDay Help</title>	 
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+		<!-- <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js#startOpened,overrideConsole"></script> -->
+	<link rel="stylesheet" type="text/css" href="templates/scripts/bootstrap/dist/css/bootstrap.min.css" />	
+	<link rel="stylesheet" type="text/css" href="templates/scripts/fontawesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="templates/wwhelp.css" />
+
+	 	<script src="templates/scripts/jquery/jquery.min.js"></script>	
+
+		<script src="templates/scripts/highlightjs/highlight.pack.js"></script>
+	<script src="templates/scripts/highlightjs-badge.min.js"></script> 
+	<link href="templates/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+  	<script src="templates/scripts/ww.jquery.min.js"></script>
+
+	 <script src="templates/scripts/wwhelp.js"></script>
+
+	<topictype value="Topictype" />
+	<script>		  
+	$(document).ready( function() {
+		helpBuilder.initializeLayout();
+		// expand all top level topics
+		setTimeout( helpBuilder.tocExpandTop, 2);
+	});
+	</script>
+</head>
+<body style="background-color:#F5FAFF;">
+
+	 <div class="flex-master">
+	<div class="banner">
+				<img src="images/escudo.png" class="banner-logo" />
+				<div class="projectname">PayDay Help</div>
+
+		  </div>
+
+		  <div class="page-content">
+				<nav class="topic-outline">
+				<div class="topic-outline-header">En esta página:</div>
+					 <div class="topic-outline-content"></div>
+				</nav>
+		  <div class="splitter"></div>
+		  <div class="main-content">
+
+				<!-- Rendered Content -->
+				<article class="content-pane">
+				<div class="row">
+					<div class="column left just">
+					</div>
+						<div class="column center just">
+
+
+<header class="content-title">
+	 <img src=images\Topic.png>
+Misceláneos
+</header>
+
+<div class="content-body" id="body"><p><span>En la sección Misceláneos veremos las siguientes clasificaciones:</span><br><ul><li>Descuentos a Empleados.<br><li>Liquidaciones.<br><li>Anualizar ingresos para el cálculo del ISR.<br><li>Otros.<br><li>Porcentajes.<br></ul><p><p align="CENTER"><img src="images\mant\opciones_miscelaneos2.png" ></p><p><br><h1>Descuentos a Empleados</h1><p><br>En esta sección tenemos diferentes parámetros que le ayudan a manejar los descuentos de los empleados.<br><br><br>
+<table align="Center" border="1" width="90%">
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+</tr>
+<tr> 
+     <td>Gastos de Representación Aumentan Capacidad</td>
+     <td>Al activar esta opción, PayDay toma en cuenta el valor que el empleado está ganando en Gasto de Representación (junto con el salario), al momento de verificar si la persona tiene capacidad para realizar sus  descuentos para los acreedores.  Recuerde que existe una reglamentación al respecto y las empresas son responsables de cumplirlas. </td>
+</tr>
+<tr> 
+     <td>No Gravables Aumentan Capacidad</td>
+     <td>Otros pagos efectuados al trabajador, tales como viáticos, transporte y otros no gravables, pueden incluirse para aumentar la capacidad de descuento de los trabajadores.  Recuerde que existe una reglamentación al respecto y las empresas son responsables de cumplirlas.  </td>
+</tr>
+<tr>
+	<td>Hacer Descuento en Planilla Extraordinaria </td>
+	<td>Al activar o desactivar esta opción, se le indica al programa si se desea hacer los descuentos con los acreedores en las planillas extraordinarias o no. </td>
+</tr>
+<tr>
+	<td>Desc en % son sobre Bruto Total</td>
+	<td>Para las deudas en que se deba descontar un porcentaje (%) del salario, al activar esta opción, se realizará el descuento sobre el salario bruto total del trabajador, es decir se incluyen los otros ingresos que reciba.</td> 
+</tr>
+<tr>
+	<td>Usar nombre corto del Acreedor en el Borrador, Vouchers y Talonario</td>
+	<td>Cada acreedor puede tener un nombre corto de 6 caracteres que se puede utilizar, activando ésta opción para que sea éste el que se imprima en el borrador, voucher y talonario en lugar del código del acreedor.</td> 
+</tr>
+
+<tr>
+	<td>Usar fórmula en las deudas</td>
+	<td>Es una opción muy especial que permite usar una codificación o fórmula para que el sistema calcule el monto a descontar al trabajador.  Requiere parámetros de programación, si desea asesoría, consúltenos.</td> 
+</tr>
+</table>
+<p><br><h1>Liquidaciones</h1><p><br>Veamos algunos parámetros especiales disponibles para utilizar en las planillas de liquidaciones, que se realizan  al momento de terminar una relación laboral.<br><br><br>
+<table align="Center" border="1" width="90%">
+<tr>
+<th>Campo</th>
+<th>Descripción</th>
+</tr>
+<tr>
+	<td>Hacer descuentos de los acreedores</td>
+	<td>Si está desactivada, el sistema no efectuará descuentos en la planilla de liquidaciones. </td> 
+</tr>
+<tr>
+	<td>Inactivar deudas al postear liquidaciones</td>
+	<td>Con esta opción, al postear una liquidación, el sistema inactivará todas las deudas que tenía activas el trabajador liquidado. </td> 
+</tr>
+
+<tr>
+	<td>Descontar de la Prima de Antigüedad y de la Indemnización cuando el acreedor es la compañía</td>
+	<td>Si el trabajador tiene deudas con la empresa, al activar esta opción, el sistema permite hacerle el descuento al empleado, exclusivamente de las deudas que tenga con acreedores configurados como 'Es la compañía.'  </td>
+</tr>
+<tr>
+	<td>El XIII Mes acumula para Prima de  Antigüedad</td>
+	<td>Actívelo solamente si requiere que los montos pagados en concepto de XIII Mes de cada trabajador sean incluidos para el pago de la prima de Antigüedad.  </td>
+</tr>
+<tr>
+	<td>El GtoRep XIII Mes acumula para Prima de Antigüedad </td>
+	<td>Actívelo si desea que los valores pagados en concepto de Gasto de Representación del XIII mes de cada empleado sean incluidos para el pago de la prima de Antigüedad.</td>
+</tr>
+<tr>
+	<td>El GtoRep XIII Mes acumula para Indemnización</td>
+	<td>Actívelo si desea que los valores pagados en concepto de Gasto de Representación del XIII mes de cada empleado sean incluidos para el pago de la Indemnización.</td>
+</tr>
+</table>
+<p><br><span class=h3>Autorizar a PayDay para verificar si hay actualizaciones nuevas</span><p><br>Si activa este parámetro, PayDay estará verificando periodicamente si hay nuevas actualizaciones disponibles en la página web y le dará aviso cuando encuentre alguna.<p><b>Verificar Backup al Reponer y al Hacer Copia</b>: Esta opción realiza verificación de los datos al momento de hacer o reponer un Backup, con la finalidad de asegurarse que no existan archivos corruptos o tablas desencriptadas.  <p>
+
+<style>
+    #inline-table{
+      width: 90%;
+      border: 1px #F5FAFF;
+    }
+    .inline-table tr {
+        border: solid 1px #F5FAFF;
+    }
+    .inline-table td {
+        border: solid 1px #F5FAFF;
+    }    
+
+</style>
+
+<table id="inline-table" align="Center">
+<tr class="inline-table"> 
+     <td class="inline-table"><img src="images/Planillas/Respaldo/VerifyBackups.png"></td>
+     <td class="inline table">Si el parámetro está activado y se encuentra algún inconveniente, el sistema le dará la alerta para que se verifiquen los datos y luego de corregirlos, se proceda a realizar o reponer el backup. </td>
+</tr>
+</table>
+<p><b>Imprimir Voucher solamente a Emp. que no tengan Email</b><br>Al activar éste parámetro se imprimirán los vouchers únicamente de los colaboradores que no tengan asignado un email en sus datos generales. <p><b>Guardar Voucher individualmente o enviados x Email</b><p>Con éste parámetro se permite guardar una copia de los Vouchers o comprobantes de pago que se envian por email a los empleados.   <p>Se agregan 2 campos nuevos en esta pantalla:<br> <ul><li style="text-align: left">El primero es para colcar una ruta donde se deben de guardar los voucher ejemplo: C:\VPAYDAY\SOSA\DOCUMENTOS\           <br></ul><p><ul><li>  El segundo campo es para armar el nombre del archivo, el conlleva una seria de parámetros, para los usuarios que prefieran cambiar los nombres de los archivos con los que se generan los comprobantes.   El cambiarlo requiere codificaciones especiales, como las que se muestran en la siguiente imagen.   Si prefiere utilizar la que PayDay coloca por default, no coloque nada en este campo, si desea cambiarla, solicite información a Sosa y Cía., S.A.<br></ul><br><p align="CENTER"><img src="images\mant\opciones_vouchersXmail.png"></p><p><br><h1>Anualizar los Ingresos para el cálculo del ISR </h1><p><br>Para el cálculo del ISR -con el método Promedio-, el sistema hace un análisis en cada planilla, para obtener un estimado de los salarios que el trabajador recibirá en lo que resta del año, y para ello, incluye en su proyección los valores que ya ha recibido en Sobretiempos, Bonos, Comisiones y otros ingresos gravables.<p>En ésta sección, se permite al usuario indicarle al sistema si requiere que todos estos ingresos se tomen en cuenta en la proyección del salario o no.  <p>Por ejemplo, si al inicio de año se paga una Bonificación, y en lo que resta del año, los trabajadores no tendrán nuevamente este ingreso, se puede desactivar ésta opción para que no se incluya en el promedio de ingresos de salarios que faltan por devengar.  <p>Las opciones disponibles son:<br><ul><li> Proyectar Sobretiempo	<br><li> Proyectar Prima Producción<br><li> Proyectar Bonificación<br><li> Proyectar Gratificaciones<br><li> Proyectar Comisión	<br><li> Proyectar Otros Ingresos <br><li> Proyectar Otros Ingresos 2<br><li> Proyectar Otros Ingresos 3<br><li> Proyectar Otros Ingresos X<br></ul><p><h1>Otros</h1><p><br>Estas opciones son muy importantes, ya que el cliente tiene el control de las mismas dependiendo de como se manejen en su empresa, estas se pueden activar  <img src="images\Botones\Activado.png"> o desactivar <img src="images\Botones\desactivado.png"> , dando click en cada opción. <p><ul><li> <u>Retener S.S. de la Participación en Utilidades	</u><p><li> <u>Retener S.S. solo al excedente de las Primas de Producción cuando estas excedan del 50% de un mes de salario</u><br>Esta opción le permite indicar al sistema si desea descontar SS a la totalidad de la prima de producción cuando ésta excede el 50% del salario mensual.  Si esta opción esta habilitada, se descuenta sólo al excedente, deshabilitada descuenta al 100%.    <p><li> <u>Retener ISR de los Salarios en Especie</u><br></ul&gt; <br>Según la Ley 51 de la C.S.S del 28 de diciembre de 2005, y Decreto Ejecutivo No 9 del 24 de Febrero de 2006, se han agregado a payday estos campos y opciones, que le van permitir al usuario decidir si se le retiene o no S.S. al hacer el pago de estas en una planilla particular.<p><li> <u>Combustible paga SS sobre MAX de 450/20%, no sobre MIN</u><p>Al Activar  <img src="images\Botones\Activado.png">  esta opción, Payday realiza el descuento de Seguro Social, basado en lo dispuesto en el artículo 91 de la Ley 51 de 27 de diciembre de 2005, y a  la Resolucción No. 38,492 - 2006 del 22 de febrero de 2006 la Junta directiva de la CSS reglamentó el descuento de SS sobre el combustible de la siguiente manera: <p>
+<table align="Center" border="0" width="75%">
+<tr> 
+     <td>" ...k) Combustible, siempre que exceda el 20% del salario y que supere los (B/.450.00) doscientos cincuenta balboas mensuales.  En caso de exceder la suma indicada, se considerará la diferencia como salario en especie  ...  "
+ </td>
+</tr>
+</table>
+<p>Con la opción desactivada <img src="images\Botones\desactivado.png"> PayDay realiza el descuento de seguro social basada en la La Resolución No. 39,190 -2006 de 2 de noviembre de 2006 modificó este literal "k" , que modificó la reglamentación anterior, quedando de la siguiente manera: <p>
+<table align="Center" border="0" width="75%">
+
+<tr> 
+     <td>
+" ... k. Combustible: siempre que exceda el 20% del salario.
+<P>
+En aquellos casos en que el 20% del salario supere los doscientos cincuenta balboas (B/.450.00) mensuales, sólo se considerará como salario en especie la suma que exceda de los doscientos cincuenta balboas (B/.450.00) mensuales, realizándose la dedución de las cuotas de seguro social sobre este excedente.  </P>
+
+En aquellos casos en que el 20% del salario no supere los (B/. 450.00) doscientos cincuenta balboas mensuales, sólo se considerá salario en especie la suma que exceda el 20% del salario, realizándose la deducción de las cuotas de seguro social sobre este excedente."
+ </td>
+</tr>
+</table>
+<p>El default en PayDay es que esta opción esté desactivada, si usted desea realizar el descuento de Seguro Social al combustible según la primera reglamentación, entonces debe activar la opción.<br> <br><li> <u>Aceptar códigos de Proyectos y Fases en blanco </u><br>Con ésta opción, los usuarios que utilizan el Interfaz con el Reloj PayDay (formato de Ms Excel), pueden especificar si se pemite hacer la importación de los datos con los códigos de los proyectos y fases en blanco.<p><li> <u>Sumar Preaviso en la Preelaborada</u><br>Al activar esta opción, PayDay le incluye en la declaración de la Planilla Preelaborada, los pagos realizados en concepto de Preaviso pagado en las Liquidaciones.  Este valor se incluye en el campo de Otros Ingresos de la Planilla Preelaborada para la CSS.<p><li> <u>Activar Empleados de Vacaciones Automáticamente</u><br>Al activar esta opción y cuando esté generando una planilla de Vacación, se muestra una pantalla con la lista de empleados que estén de vacaciones.  La pantalla permite seleccionar de manera general o individual a los empleados que serán activados e incorporados a la planilla, la pantalla permite imprimir un reporte de todos estos empleados.<p><li> <u>Generar Código Automático para Empleados</u><br>Permite que el sistema, al momento de crear un nuevo empleado, genere automáticamente el código de empleado.  Este puede ser de forma numérica o alfanumérica, en ambos casos el código generado ocupa  máximo 6 caracteres.  Al activar el parámetro, debe indicar si los códigos serán numéricos o alfanuméricos, así:<p><p align="CENTER"><img src="images/actualiza/OPC_GENERA_CODIGO.png" /></p><p><br><h1>Porcentajes</h1><p><br>
+<table align="Center" border="1" width="90%">
+<tr>  <th>Campo</th>   <th>Descripción</th></tr>
+<tr>
+	<td>Porcentaje de Riesgos Profesionales</td>
+	<td>Coloque el porcentaje de Riesgos Profesionales asignado a cada empresa que tenga en PayDay, de acuerdo a lo que haya designado la Caja de Seguro Social.</td> 
+</tr>
+<tr>
+	<td>Porcentaje por Gastos de Manejo en las Deudas</td>
+	<td>Es el porcentaje que la empresa descuenta a los acreedores al hacerle el pago de los descuentos realizados a los trabajadores, en compensación por los gastos ocasionados por el manejo de los descuentos.</td>
+</tr>
+</table>
+<p>
+</div>
+						</div>
+				</div>
+				</article>
+					 <hr />
+					 <div><a href="http://www.payday.com.pa"><img width=11% align=right src="images/logo.png"/></a></div>
+				<small>
+						  &copy; Sosa y Cía, S.A., 1996-2025 &bull;
+						  Última actualización: 12/11/21
+						  <br />
+					 </small>		
+				<br class="clearfix" />
+					 <br />
+					 <!-- End Rendered Content -->
+				</div>
+		  </div>		  
+	 </div>
+
+
+<div style="position: absolute; left: 0; bottom: 0; padding: 8px; background-color: #333; color: white; display:block !important; font-size: 11pt; border-radius-top-right: 3px; box-shadow: 3px 3px 8px #535353;opacity: 0.87" data-id="hbp">	
+	<a href="http://helpbuilder.west-wind.com/" target="_helpbuilder">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAFTklEQVR4Xt3TW2wcZxnG8f83M7szs7sz68M6PgUrbp0El7ZJG1Kq1LiyAmqIDaEpBkFUKRI0SE2LlEr0AirccNEUqghRJECUcugFbWQQIXCRCCiqiB1aQkSjOE5iJ44TH2Lv2uvd2eOcPnIRS16pXCAhLvjdvO/V+1w8evmfO3bsqHn69NctKRH8FwiAAwcORPZ/1ntmY2f1y8mEu1lVAwEiL+CkUNXvdu3ZoCwtVvcFaD2ReCLS/+LnYlMnz/s3zlw7byXiJzvvT/z6Dz/5aokPIIaGhrTeLePH+x72+4WgFhBK4fcfNNRTp6Milqzj3v4d7HzhcbwVh5FXTjF95jqy6i/UWe7Q4IB47fDhwyFrKLqYeKLno97qcULJWCYbHXU9CYAipHbkOcT2Jx6h56ldbNv3KF4+xK2EjJ+6gKqC61aa09nwxz8frgwPDByI1QTc0+l+MhoRAEiJFGpkz859Ky8f+12GVXd3SLp2dNO6qZWgUKS8lEXTY3xx+Fk2fOp+orZJWIVSIbL3/Sv68ODgoModWiq5/dB7l8QLABE1G3zn6Gi8577CG7v62lh1I2tTyuVRQx/fd9ECF7/qYthxtg4+xPzFa7hhldJiAbdq7h49V/c8cARAsMbzzz6+/uB+OdLRpnRwx/yyzosnHmLGb8NIJrCUADNmYN7eg1gdYcLi9SdfYcund/DuW6MgBBqV4uZ1E3dfuPD2gsIaW+91v7Z6XEoYm27lz+e3c7sT3EKZas6hXKiQ9Jb5eJtHPDfDzF9GeGD3VvLpDCglkCV8ZHzesQ8CaKyhm2p3GALA2bEIvzoRJZGsUC98mpIQr1Ox4grrGyS9m0v4XoTZOZWxv/2DhVkHEYJAwVACwjC2B/iWYI2u7p2vrd9411fK5YAmK0JDXGEpD4rViIwlWAl1ohGFhA4tSYEZ11kJDEqGzdvfexOvHAAKughRVN/t7dlqaazx1D7jvq4NWbxKFRWD9851cH0uC64DpZD2VptiqFIoCG56Klq+imqCcAPMtnqyV2eoV3y0iETTiKZSTnNNB9u6Zf3enSFf6I+w40GfDe0pJBpGNIrjVBifzFDOOrQkJM1WiKmGVEouN8enyVydpG3jhwiisD7l8eFuGzBrOxCKyiqpRDj+zjSBiJKrhDSYGreKPgsZh3S2gG6aJOtM6u2QSvYSW7p0DHuJhk90cVdDDiPVXklPpW8J1vjNG3t+v7nLHljOeSxlVV76WQuaKvFEBA2JrqtkClVk4OJWXEw7jqZH8dwyE++8i2YbCFmhyQIjqv1z/NLIA0rNH7xa//RLv9zkP/dqJy8f66ZY9licm+PG+EWKrsQPIRWLcuvyJNPnzjIzdoGFqSnSU9cJ/RKpthS6ZbG0VEJf13kcoCbg6tlf3Hz/cuatpkabhoTEXtdKPlskOzfPxJkRVpwqjuNgqUWkhEJ6gdzsLG7eQWiC0u3pzM+CYThNjc0/AtCoxbKz/M2Gcv1n3FC31ZUrtNS7NFsWxaLP8vWLtG/qpuRrtDeZLC47qJqGbteBrpJfvEXgl4k3dh/542+PLgIIPsA9jz4z2NDU8mYuW1Yv//VPqGoEOyEwDAiR5PKScrlKY1Lg+z45x0NKj1B6JJqbTzzWc2jv8PDng9qAWjw88O0vZaav/PTm5QkTBCAJZYBEAgABAlCVEMsUVN0qFczhjraeJycnf1DlDsG/x5a+pz8yf2Xyh+VCtdctV5BIpJRIQgQ+AMgQFNIR0/pGKTf6OiD5Tz24+/DH7MZd348l+/5uWL1pM/5INmb1Xk3U952wmh7b37ptKMb/rX8BL2lNNiGFZBEAAAAASUVORK5CYII="
+ style="float: left; margin-right: 15px;"/>
+	</a>
+	This page was generated by the shareware version of <a href="http://helpbuilder.west-wind.com/" target="_helpbuilder" style="color: cornsilk;font-weight: bold;">West Wind Html Help Builder</a>.	
+</div></body>
+</html>

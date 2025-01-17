@@ -1,0 +1,395 @@
+<html>
+<head>
+<base target="wwhelp_right">
+<title>PayDay Help</title>
+<LINK rel="stylesheet" type="text/css" href="templates/wwhelp.css">
+<script>
+// *** Set this value for a Home Link
+//var HomeLink = "http://www.west-wind.com/wwhelp/";
+var HomeLink = "/";
+
+var AllowSearch = false;
+
+function AlwaysExpand(lcID) {
+   var loNode = document.getElementById(lcID);
+   if (loNode==null)
+    return;
+    
+   loNode.style.display="";
+   
+   loNode = document.getElementById("IMG" + lcID);
+   if (loNode != null)
+      loNode.src = "bmp/minus.gif";
+}
+function Expand(lcID) {
+   var loNode = document.getElementById(lcID);
+   if (loNode != null) {
+      if (loNode.style.display=="none")
+         loNode.style.display="";
+      else
+         loNode.style.display="none";
+   }
+
+   loNode = document.getElementById("IMG" + lcID);
+   if (loNode != null) {
+      if (loNode.src.indexOf("plus.gif") > -1)
+         loNode.src = "bmp/minus.gif";
+      else
+          loNode.src = "bmp/plus.gif";
+      }
+}
+function ExpandParents(lcId) 
+{
+   var loNode = document.getElementById(lcId);
+   if (loNode == null)
+      return;
+   
+   AlwaysExpand(lcId);
+
+   var loOriginal = loNode
+
+   while( loNode!=null) 
+   {
+      loNode = loNode.parentNode;
+
+      if (loNode == null)
+         break;
+      
+      lcId = loNode.id;
+      
+      if (lcId == null || lcId == "")
+         break;
+
+      if ( lcId.substr(0,1) == "_") 
+         ExpandParents(lcId);
+   }
+   
+   loOriginal.scrollIntoView(true);
+   window.scroll(-200,0);
+}
+function PageLoad() {
+   Expand('INDEXPAGE');
+   
+   // *** Expand all parent topics if an ID was passed
+   var lcQuery = window.location.search;
+   var lnMatch = lcQuery.search("id=");
+   if (lnMatch > -1) 
+   {
+   lcPage = lcQuery.substr(lnMatch + 3);
+   ExpandParents(lcPage);
+   }
+}
+</script>
+<style>
+.plussign 
+{
+cursor:hand;
+marginBottom:3px;
+}
+</style>
+</head>
+<body topmargin="0" leftmargin="0" style="background:white" onload="PageLoad();">
+
+<div  class="toccontents banner ">&nbsp;<b style="font-size:10pt">PayDay Help</b>
+<div style='font-size:8pt;margin-top:5px;margin-bottom:5px'>
+<script>
+if (HomeLink)
+{
+	document.write("&nbsp;<a href='" + HomeLink + "' target='_top'>Home</a> |");
+}
+if (AllowSearch && window.location.href.toLowerCase().substr(0,5) == "http:")
+{
+	document.write("&nbsp;<a href='search.aspx?title=PayDay+Help' target='wwhelp_left'>Search</a> | <a href='keywords.htm' target='wwhelp_left'>Keywords</a>");
+}
+</script>
+</div>
+</div>
+<table width="800" class="tocbody">
+<tr><td><span class="tocbody"><img src="bmp/plus.gif" ID="IMGindexpage" class="plussign" onclick="Expand('indexpage');"> <img src="bmp/classheader.gif"> <a href="indexpage.htm" onclick="AlwaysExpand('indexpage');">Bienvenidos a PayHelp</a> <br>
+<span id="indexpage" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_5c00wsx32" class="plussign" onclick="Expand('_5c00wsx32');"> <img src="bmp/header.gif"> <a href="_5c00wsx32.htm" onclick="AlwaysExpand('_5c00wsx32');">Que hay de nuevo?</a> <br>
+<span id="_5c00wsx32" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_5hg0ljv8r.htm" id="_5hg0ljv8r">Nuevo interfaz con SIPE</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_5bm0v0gn9.htm" id="_5bm0v0gn9">Convención Capac/Suntracs 2018-2021</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1u00yixlg" class="plussign" onclick="Expand('_1u00yixlg');"> <img src="bmp/header.gif"> <a href="_1u00yixlg.htm" onclick="AlwaysExpand('_1u00yixlg');">Planilla PayDay</a> <br>
+<span id="_1u00yixlg" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_20m0lbowt" class="plussign" onclick="Expand('_20m0lbowt');"> <img src="bmp/header.gif"> <a href="_20m0lbowt.htm" onclick="AlwaysExpand('_20m0lbowt');">Planillas</a> <br>
+<span id="_20m0lbowt" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/header.gif"> <a href="_20m0lboxz.htm" id="_20m0lboxz">Reloj</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_20m0lboxe" class="plussign" onclick="Expand('_20m0lboxe');"> <img src="bmp/header.gif"> <a href="_20m0lboxe.htm" onclick="AlwaysExpand('_20m0lboxe');">Planillas Regulares</a> <br>
+<span id="_20m0lboxe" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_20m0lboxi" class="plussign" onclick="Expand('_20m0lboxi');"> <img src="bmp/topic.gif"> <a href="_20m0lboxi.htm" onclick="AlwaysExpand('_20m0lboxi');">Generar Transacciones</a> <br>
+<span id="_20m0lboxi" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_3mk0yvvb4.htm" id="_3mk0yvvb4">Empleados que no están Activos</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_3mk0yvee3.htm" id="_3mk0yvee3">Empleados que venció su periodo de Vacaciones</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_4590jxwmf.htm" id="_4590jxwmf">Múltiples Planillas</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_20m0lboxk" class="plussign" onclick="Expand('_20m0lboxk');"> <img src="bmp/topic.gif"> <a href="_20m0lboxk.htm" onclick="AlwaysExpand('_20m0lboxk');">Introducir Datos</a> <br>
+<span id="_20m0lboxk" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20m0lboxt.htm" id="_20m0lboxt">Seleccionar</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_20m0lboxn" class="plussign" onclick="Expand('_20m0lboxn');"> <img src="bmp/topic.gif"> <a href="_20m0lboxn.htm" onclick="AlwaysExpand('_20m0lboxn');">Salarios y Sobretiempos</a> <br>
+<span id="_20m0lboxn" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20m0lboxp.htm" id="_20m0lboxp">Hora E/S - Forma de uso</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20m0lboxs.htm" id="_20m0lboxs">ST E/S - Forma de uso</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20m0lboxo.htm" id="_20m0lboxo">Estándar - Forma de Uso</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20m0lboxq.htm" id="_20m0lboxq">Reloj - Hora Entrada / Salida</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20m0lboxr.htm" id="_20m0lboxr">Reloj - Resumen</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20m0lboxm.htm" id="_20m0lboxm">Otros Ingresos</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20m0lboxl.htm" id="_20m0lboxl">Deudas Rápidas</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20m0lboxf.htm" id="_20m0lboxf">Borrador</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_20m0lboxy" class="plussign" onclick="Expand('_20m0lboxy');"> <img src="bmp/topic.gif"> <a href="_20m0lboxy.htm" onclick="AlwaysExpand('_20m0lboxy');">Vouchers o Comprobantes</a> <br>
+<span id="_20m0lboxy" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1zw0p0r8s.htm" id="_1zw0p0r8s">Formatos de Vouchers Regulares</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_2rl0tf2qa.htm" id="_2rl0tf2qa">Vouchers por Email</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20m0lboxj.htm" id="_20m0lboxj">Informes al Banco</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_20m0lboxu" class="plussign" onclick="Expand('_20m0lboxu');"> <img src="bmp/topic.gif"> <a href="_20m0lboxu.htm" onclick="AlwaysExpand('_20m0lboxu');">Respaldo de Archivo</a> <br>
+<span id="_20m0lboxu" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20m0lboxw.htm" id="_20m0lboxw">Copiar Archivos</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20m0lboxx.htm" id="_20m0lboxx">Reponer Archivos</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_20m0lboxv" class="plussign" onclick="Expand('_20m0lboxv');"> <img src="bmp/topic.gif"> <a href="_20m0lboxv.htm" onclick="AlwaysExpand('_20m0lboxv');">Backup Externos</a> <br>
+<span id="_20m0lboxv" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_23v0tw91u.htm" id="_23v0tw91u">Zip - Local</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_23v0twr4x.htm" id="_23v0twr4x">Zip - Via FPT</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_23v0tx5ka.htm" id="_23v0tx5ka">Zip - Vía Email</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_46e0kgul7.htm" id="_46e0kgul7">Envío otros archivos</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20m0lboxg.htm" id="_20m0lboxg">Cheques \ Postear</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20m0lboxh.htm" id="_20m0lboxh">Eliminar Planilla</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/header.gif"> <a href="_20m0lbox9.htm" id="_20m0lbox9">Extra-ordinaria</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/header.gif"> <a href="_20m0lbox8.htm" id="_20m0lbox8">Décimo III</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_20m0lboy0" class="plussign" onclick="Expand('_20m0lboy0');"> <img src="bmp/header.gif"> <a href="_20m0lboy0.htm" onclick="AlwaysExpand('_20m0lboy0');">Vacaciones</a> <br>
+<span id="_20m0lboy0" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20m0lboy1.htm" id="_20m0lboy1">Datos de las Vacaciones</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20m0lboy2.htm" id="_20m0lboy2">Otros Ingresos -Vac</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20m0lboy3.htm" id="_20m0lboy3">Distribución</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_20m0lboxa" class="plussign" onclick="Expand('_20m0lboxa');"> <img src="bmp/header.gif"> <a href="_20m0lboxa.htm" onclick="AlwaysExpand('_20m0lboxa');">Liquidación</a> <br>
+<span id="_20m0lboxa" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20m0lboxb.htm" id="_20m0lboxb">Calculo de Liquidación</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20m0lboxc.htm" id="_20m0lboxc">Otros Ingresos - Liquidación</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20m0lboxd.htm" id="_20m0lboxd">Informe Liquidación</a> <br>
+</span>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1u00wzegu" class="plussign" onclick="Expand('_1u00wzegu');"> <img src="bmp/header.gif"> <a href="_1u00wzegu.htm" onclick="AlwaysExpand('_1u00wzegu');">Mantenimiento</a> <br>
+<span id="_1u00wzegu" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_17q10ante" class="plussign" onclick="Expand('_17q10ante');"> <img src="bmp/header.gif"> <a href="_17q10ante.htm" onclick="AlwaysExpand('_17q10ante');">Empleados</a> <br>
+<span id="_17q10ante" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_17q10bwbz" class="plussign" onclick="Expand('_17q10bwbz');"> <img src="bmp/header.gif"> <a href="_17q10bwbz.htm" onclick="AlwaysExpand('_17q10bwbz');">Datos Generales</a> <br>
+<span id="_17q10bwbz" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_17r0o4hl8.htm" id="_17r0o4hl8">Datos Principales</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_17r0o4wsy.htm" id="_17r0o4wsy">Forma de Pago</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_17r0o53am.htm" id="_17r0o53am">Datos Generales - Emp</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_17r0o5e5r.htm" id="_17r0o5e5r">Configuración - Empleado</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_17r0o5k5m.htm" id="_17r0o5k5m">Ingresos Predeterminados</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_2s90qhcj2.htm" id="_2s90qhcj2">Observaciones</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1u00zebfx" class="plussign" onclick="Expand('_1u00zebfx');"> <img src="bmp/header.gif"> <a href="_1u00zebfx.htm" onclick="AlwaysExpand('_1u00zebfx');">Cambiar Salarios / Ingresos</a> <br>
+<span id="_1u00zebfx" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_2q10xs8xc" class="plussign" onclick="Expand('_2q10xs8xc');"> <img src="bmp/topic.gif"> <a href="_2q10xs8xc.htm" onclick="AlwaysExpand('_2q10xs8xc');">Individual</a> <br>
+<span id="_2q10xs8xc" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1u40ym5gx.htm" id="_1u40ym5gx">Historial de Cambios</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_2q10xsq3t.htm" id="_2q10xsq3t">En Masa</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_17r0icndz" class="plussign" onclick="Expand('_17r0icndz');"> <img src="bmp/header.gif"> <a href="_17r0icndz.htm" onclick="AlwaysExpand('_17r0icndz');">Ajuste a los Acumulados</a> <br>
+<span id="_17r0icndz" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_17r0i9q75.htm" id="_17r0i9q75">Ingresos</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1u40yzmyt.htm" id="_1u40yzmyt">Gastos</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_46b116eki.htm" id="_46b116eki">Construcción</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1u40yzwju.htm" id="_1u40yzwju">Otros</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1u40z03yc.htm" id="_1u40z03yc">Acumulados</a> <br>
+</span>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_17r0hn06o" class="plussign" onclick="Expand('_17r0hn06o');"> <img src="bmp/header.gif"> <a href="_17r0hn06o.htm" onclick="AlwaysExpand('_17r0hn06o');">Acreedores</a> <br>
+<span id="_17r0hn06o" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_17r0hnimz.htm" id="_17r0hnimz">Datos del Acreedor</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_17r0hlywh" class="plussign" onclick="Expand('_17r0hlywh');"> <img src="bmp/header.gif"> <a href="_17r0hlywh.htm" onclick="AlwaysExpand('_17r0hlywh');">Deudas</a> <br>
+<span id="_17r0hlywh" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_17r0hocpx" class="plussign" onclick="Expand('_17r0hocpx');"> <img src="bmp/topic.gif"> <a href="_17r0hocpx.htm" onclick="AlwaysExpand('_17r0hocpx');">Datos de la Deuda</a> <br>
+<span id="_17r0hocpx" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1tm0pmv81.htm" id="_1tm0pmv81">Historial de deducciones</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1tm0m9oqw.htm" id="_1tm0m9oqw">Ajustar el saldo de la deuda</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1tm0luila.htm" id="_1tm0luila">Reversar Deducción</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_17r0hpb1l.htm" id="_17r0hpb1l">Disponibilidad de endeudamiento</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1tm0mf51e.htm" id="_1tm0mf51e">Crear deudas en masa</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1tq0yrd5w.htm" id="_1tq0yrd5w">Importar Deudas en Masa</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_3mg0m75f1.htm" id="_3mg0m75f1">Activa E Inactiva Deuda en Masa</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/header.gif"> <a href="_17r0sw0b5.htm" id="_17r0sw0b5">Sucursales</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/header.gif"> <a href="_17r0sqpso.htm" id="_17r0sqpso">Departamentos</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_17r0sqder" class="plussign" onclick="Expand('_17r0sqder');"> <img src="bmp/header.gif"> <a href="_17r0sqder.htm" onclick="AlwaysExpand('_17r0sqder');">Horarios</a> <br>
+<span id="_17r0sqder" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1u00zp1fb.htm" id="_1u00zp1fb">Datos del Horario</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1u00zqi35.htm" id="_1u00zqi35">Horario Otros</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1v50wq1sg" class="plussign" onclick="Expand('_1v50wq1sg');"> <img src="bmp/topic.gif"> <a href="_1v50wq1sg.htm" onclick="AlwaysExpand('_1v50wq1sg');">Métodos de Captura de Datos</a> <br>
+<span id="_1v50wq1sg" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1v50wq1sh.htm" id="_1v50wq1sh">1. Hora Entrada/Salida</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1v50wq1si.htm" id="_1v50wq1si">2. S.T. Entrada/S.T. Salida</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1v50wq1so.htm" id="_1v50wq1so">3. Estándar</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1v50wq1sq.htm" id="_1v50wq1sq">4. Reloj</a> <br>
+</span>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1zw0p0r8f" class="plussign" onclick="Expand('_1zw0p0r8f');"> <img src="bmp/header.gif"> <a href="_1zw0p0r8f.htm" onclick="AlwaysExpand('_1zw0p0r8f');">Grupos de Pago</a> <br>
+<span id="_1zw0p0r8f" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1zw0p0r8r.htm" id="_1zw0p0r8r">Formatos de  Borrador</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1zw0p0r8u.htm" id="_1zw0p0r8u">Formatos de Totales Borrador</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1zw0p0r8v.htm" id="_1zw0p0r8v">Formatos de Talonarios</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/header.gif"> <a href="_2s10wn41r.htm" id="_2s10wn41r">Anotaciones</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/header.gif"> <a href="_3b50y7lkk.htm" id="_3b50y7lkk">Cargos</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_17q107ps8" class="plussign" onclick="Expand('_17q107ps8');"> <img src="bmp/header.gif"> <a href="_17q107ps8.htm" onclick="AlwaysExpand('_17q107ps8');">Configuración</a> <br>
+<span id="_17q107ps8" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_17r0sbr0q.htm" id="_17r0sbr0q">Datos de la Compañía</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_17r0sx4e2" class="plussign" onclick="Expand('_17r0sx4e2');"> <img src="bmp/topic.gif"> <a href="_17r0sx4e2.htm" onclick="AlwaysExpand('_17r0sx4e2');">Opciones</a> <br>
+<span id="_17r0sx4e2" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_18q0k0cy7.htm" id="_18q0k0cy7">Opciones Generales</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_18q0k1v34.htm" id="_18q0k1v34">Reportes e Impresión</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_18q0k2nij.htm" id="_18q0k2nij">Misceláneos</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_18q0k31sv.htm" id="_18q0k31sv">Cuentas del Mayor General</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_18q0k3dxw.htm" id="_18q0k3dxw">Cambiar nombre a campos</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_5c411ah1u.htm" id="_5c411ah1u">Construcción</a> <br>
+</span>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_17r0hweet" class="plussign" onclick="Expand('_17r0hweet');"> <img src="bmp/header.gif"> <a href="_17r0hweet.htm" onclick="AlwaysExpand('_17r0hweet');">Bancos</a> <br>
+<span id="_17r0hweet" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_17r0ij6pb.htm" id="_17r0ij6pb">Datos Generales del Banco</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_17r0ijsiw.htm" id="_17r0ijsiw">Adaptar cheques</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1u00xuwky" class="plussign" onclick="Expand('_1u00xuwky');"> <img src="bmp/header.gif"> <a href="_1u00xuwky.htm" onclick="AlwaysExpand('_1u00xuwky');">Transacciones Históricas</a> <br>
+<span id="_1u00xuwky" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1u00ztg7g.htm" id="_1u00ztg7g">Reversar Transacciones</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1u00zttrb.htm" id="_1u00zttrb">Modificar Clasificaciones</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/header.gif"> <a href="_17r0pv789.htm" id="_17r0pv789">Cuentas del Mayor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/header.gif"> <a href="_1u00xuku7.htm" id="_1u00xuku7">Divisiones</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/header.gif"> <a href="_17r0pvi9v.htm" id="_17r0pvi9v">Centros de Costos</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/header.gif"> <a href="_17r0px2rw.htm" id="_17r0px2rw">Proyectos</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/header.gif"> <a href="_17r0pxcuk.htm" id="_17r0pxcuk">Fases</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_17r0ji6j5" class="plussign" onclick="Expand('_17r0ji6j5');"> <img src="bmp/header.gif"> <a href="_17r0ji6j5.htm" onclick="AlwaysExpand('_17r0ji6j5');">Informes</a> <br>
+<span id="_17r0ji6j5" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1y30zi6r6" class="plussign" onclick="Expand('_1y30zi6r6');"> <img src="bmp/topic.gif"> <a href="_1y30zi6r6.htm" onclick="AlwaysExpand('_1y30zi6r6');">Informes de Empleados</a> <br>
+<span id="_1y30zi6r6" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_2s10uyu8h.htm" id="_2s10uyu8h">Muestra de Informes de Empleados</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1y30zmv33" class="plussign" onclick="Expand('_1y30zmv33');"> <img src="bmp/topic.gif"> <a href="_1y30zmv33.htm" onclick="AlwaysExpand('_1y30zmv33');">Informes de Recursos Humanos</a> <br>
+<span id="_1y30zmv33" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20h0wzqcj.htm" id="_20h0wzqcj">Muestras Informes de Rec Humanos</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_20h0x09d0" class="plussign" onclick="Expand('_20h0x09d0');"> <img src="bmp/topic.gif"> <a href="_20h0x09d0.htm" onclick="AlwaysExpand('_20h0x09d0');">Cartas y Otros Documentos</a> <br>
+<span id="_20h0x09d0" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20i0kolz4.htm" id="_20i0kolz4">Ejemplos de Cartas y Otros documentos</a> <br>
+</span>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1y30zil7l" class="plussign" onclick="Expand('_1y30zil7l');"> <img src="bmp/topic.gif"> <a href="_1y30zil7l.htm" onclick="AlwaysExpand('_1y30zil7l');">Informe de Acreedores</a> <br>
+<span id="_1y30zil7l" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20i0lcbiz.htm" id="_20i0lcbiz">Muestras de Informes de Acreedores</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_20i0ld3mp" class="plussign" onclick="Expand('_20i0ld3mp');"> <img src="bmp/topic.gif"> <a href="_20i0ld3mp.htm" onclick="AlwaysExpand('_20i0ld3mp');">Pagar a Acreedores</a> <br>
+<span id="_20i0ld3mp" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20i0qcarv.htm" id="_20i0qcarv">Acreedores por Cheque</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20i0qclv6.htm" id="_20i0qclv6">Acreedores por Transferencia</a> <br>
+</span>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1y30zivla.htm" id="_1y30zivla">Informes de Deudas</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1y30zj6em.htm" id="_1y30zj6em">Informes de Planillas</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1y30zjjt9.htm" id="_1y30zjjt9">Informes de Cheques y Depósitos Directos</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1y30zjtdf" class="plussign" onclick="Expand('_1y30zjtdf');"> <img src="bmp/topic.gif"> <a href="_1y30zjtdf.htm" onclick="AlwaysExpand('_1y30zjtdf');">Mayor General</a> <br>
+<span id="_1y30zjtdf" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_2110wtuwd" class="plussign" onclick="Expand('_2110wtuwd');"> <img src="bmp/topic.gif"> <a href="_2110wtuwd.htm" onclick="AlwaysExpand('_2110wtuwd');">Resumen de Gastos</a> <br>
+<span id="_2110wtuwd" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_22p0n4his.htm" id="_22p0n4his">Parámetros del Asiento Contable</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_2110x08b2.htm" id="_2110x08b2">Ejemplos Mayor General</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1y30zkamy.htm" id="_1y30zkamy">Informe de Centros de Costos</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20f0j692g.htm" id="_20f0j692g">Informe de Divisiones</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20f0k6mj3.htm" id="_20f0k6mj3">Proyectos y Fases</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_20f0k8o35.htm" id="_20f0k8o35">Impuesto Sobre la Renta</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1tq0zro3s" class="plussign" onclick="Expand('_1tq0zro3s');"> <img src="bmp/header.gif"> <a href="_1tq0zro3s.htm" onclick="AlwaysExpand('_1tq0zro3s');">Seguro Social</a> <br>
+<span id="_1tq0zro3s" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_5f90xd3la.htm" id="_5f90xd3la">Muestra Formato Mecanizado</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1tq0zro3t" class="plussign" onclick="Expand('_1tq0zro3t');"> <img src="bmp/header.gif"> <a href="_1tq0zro3t.htm" onclick="AlwaysExpand('_1tq0zro3t');">Fondo de Cesantía</a> <br>
+<span id="_1tq0zro3t" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_2190xvow3.htm" id="_2190xvow3">Procedimientos para el Cálculo</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_2190xvz2u.htm" id="_2190xvz2u">Tabla para Fondo de Cesantía</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_46e0ooips.htm" id="_46e0ooips">Administración</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1um0rkqyu" class="plussign" onclick="Expand('_1um0rkqyu');"> <img src="bmp/header.gif"> <a href="_1um0rkqyu.htm" onclick="AlwaysExpand('_1um0rkqyu');">Otros</a> <br>
+<span id="_1um0rkqyu" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1um0rkqyz.htm" id="_1um0rkqyz">Fecha de Proceso</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1um0rkqz0.htm" id="_1um0rkqz0">Calculadora</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1um0rkqz1.htm" id="_1um0rkqz1">Calendario</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/header.gif"> <a href="_1um0rkqyw.htm" id="_1um0rkqyw">Respaldo de Archivos</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/header.gif"> <a href="_1um0rkqyv.htm" id="_1um0rkqyv">Cierre Mensual</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1um0rkqz2" class="plussign" onclick="Expand('_1um0rkqz2');"> <img src="bmp/header.gif"> <a href="_1um0rkqz2.htm" onclick="AlwaysExpand('_1um0rkqz2');">Otros Procesos</a> <br>
+<span id="_1um0rkqz2" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1um0rkqzg.htm" id="_1um0rkqzg">Anular Cheques</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1um0rkqza.htm" id="_1um0rkqza">Anexo 03</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1um0rkqzh.htm" id="_1um0rkqzh">Reparar Archivos</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1um0rkqzf.htm" id="_1um0rkqzf">Reordenar la Información</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1um0rkqzj.htm" id="_1um0rkqzj">Recalcular Acumulados de XIII Mes</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1um0rkqzi.htm" id="_1um0rkqzi">Recalcular acumulados de Vacaciones</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1um0rkqzk.htm" id="_1um0rkqzk">Recalcular Acumulados MES y AÑO</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1um0rkqzl" class="plussign" onclick="Expand('_1um0rkqzl');"> <img src="bmp/header.gif"> <a href="_1um0rkqzl.htm" onclick="AlwaysExpand('_1um0rkqzl');">Administración</a> <br>
+<span id="_1um0rkqzl" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1um0rkqzm.htm" id="_1um0rkqzm">Añadir Compañía</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1um0rkqzn.htm" id="_1um0rkqzn">Seleccionar Copañía</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_44w161jf7.htm" id="_44w161jf7">Copiar Configuración desde Otra Compañia</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_44w15tjqu.htm" id="_44w15tjqu">Roles</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1um0rkqzo" class="plussign" onclick="Expand('_1um0rkqzo');"> <img src="bmp/header.gif"> <a href="_1um0rkqzo.htm" onclick="AlwaysExpand('_1um0rkqzo');">Usuarios</a> <br>
+<span id="_1um0rkqzo" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1um0rkqzp.htm" id="_1um0rkqzp">Crear nuevo Usuario</a> <br>
+</span>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1um0rkqzr.htm" id="_1um0rkqzr">Cambiar Password</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_1um0rkqzs.htm" id="_1um0rkqzs">Cambiar de Usuario</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_44w168vrk.htm" id="_44w168vrk">Bitácora</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/header.gif"> <a href="_1u10k4cud.htm" id="_1u10k4cud">Ayuda</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/header.gif"> <a href="_1u00x3vsz.htm" id="_1u00x3vsz">Salir</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_23l0r80i9" class="plussign" onclick="Expand('_23l0r80i9');"> <img src="bmp/header.gif"> <a href="_23l0r80i9.htm" onclick="AlwaysExpand('_23l0r80i9');">Imprimir Reportes</a> <br>
+<span id="_23l0r80i9" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_23m0j04tx.htm" id="_23m0j04tx">Pantalla</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_23m0j0nyy.htm" id="_23m0j0nyy">Impresora</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_23m0j17ex.htm" id="_23m0j17ex">Email</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_23m0j1fbt.htm" id="_23m0j1fbt">Excel</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_23m0j1mf5.htm" id="_23m0j1mf5">PDF</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_23m0sffvr" class="plussign" onclick="Expand('_23m0sffvr');"> <img src="bmp/header.gif"> <a href="_23m0sffvr.htm" onclick="AlwaysExpand('_23m0sffvr');">PaySupport</a> <br>
+<span id="_23m0sffvr" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_23m0sffvk.htm" id="_23m0sffvk">Funcionamiento</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_23m0sffvs.htm" id="_23m0sffvs">Seguridad</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_23m0sffvn.htm" id="_23m0sffvn">Acceso a PaySupport</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_23m0sffvo.htm" id="_23m0sffvo">Requisitos</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/topic.gif"> <a href="_23m0sffvp.htm" id="_23m0sffvp">Herramientas</a> <br>
+</span>
+</span>
+</span></td></tr></table>
+
+<script>
+// *** Expand all parent topics if an ID was passed
+var lcQuery = window.location.search;
+var lnMatch = lcQuery.search("id=");
+if (lnMatch > -1) 
+{
+   lcPage = lcQuery.substr(lnMatch + 3);
+   ExpandParents(lcPage);
+}
+if (HomeLink)
+{
+}
+</script>
+
+</body>
+</html>

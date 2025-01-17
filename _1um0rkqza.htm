@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+<head> 
+		<meta charset="utf-8" /> 
+	 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	 	<title>Anexo 03 - PayDay Help</title>	 
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+		<!-- <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js#startOpened,overrideConsole"></script> -->
+	<link rel="stylesheet" type="text/css" href="templates/scripts/bootstrap/dist/css/bootstrap.min.css" />	
+	<link rel="stylesheet" type="text/css" href="templates/scripts/fontawesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="templates/wwhelp.css" />
+
+	 	<script src="templates/scripts/jquery/jquery.min.js"></script>	
+
+		<script src="templates/scripts/highlightjs/highlight.pack.js"></script>
+	<script src="templates/scripts/highlightjs-badge.min.js"></script> 
+	<link href="templates/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+  	<script src="templates/scripts/ww.jquery.min.js"></script>
+
+	 <script src="templates/scripts/wwhelp.js"></script>
+
+	<topictype value="Topictype" />
+	<script>		  
+	$(document).ready( function() {
+		helpBuilder.initializeLayout();
+		// expand all top level topics
+		setTimeout( helpBuilder.tocExpandTop, 2);
+	});
+	</script>
+</head>
+<body style="background-color:#F5FAFF;">
+
+	 <div class="flex-master">
+	<div class="banner">
+				<img src="images/escudo.png" class="banner-logo" />
+				<div class="projectname">PayDay Help</div>
+
+		  </div>
+
+		  <div class="page-content">
+				<nav class="topic-outline">
+				<div class="topic-outline-header">En esta página:</div>
+					 <div class="topic-outline-content"></div>
+				</nav>
+		  <div class="splitter"></div>
+		  <div class="main-content">
+
+				<!-- Rendered Content -->
+				<article class="content-pane">
+				<div class="row">
+					<div class="column left just">
+					</div>
+						<div class="column center just">
+
+
+<header class="content-title">
+	 <img src=images\Topic.png>
+Anexo 03
+</header>
+
+<div class="content-body" id="body"><p>En PayDay podemos revisar y modificar el Anexo 03, veamos sus opciones:<p><span class="header3">1. Listado</span><br>Al tomar ésta opción, PayDay nos prepara el Anexo 03 del año anterior que se debe reportar a la Dirección General de Ingresos.  Se calcula la Renta Bruta, la Renta Neta, el Impuesto Causado y se obtienen las diferencias a favor del Fisco o del empleado -si existen.   <p>Es importante verificar, tal como lo muestra la siguiente ilustración, los nuevos cambios para la presentación del Anexo 03.  Marque las opciones que quiere utilizar y presione <img src="images\Botones\Continuar.png">  así podrá ver su informe en pantalla o imprimirlo.<p><p align="CENTER"><img src="images\actualiza\mensaje03.png"></p><p><br><span class="header3">2. Modificar Datos</span><br>El sistema le permite ajustar ciertos datos, de ser necesario. <p><p align="CENTER"><img src="images\otros\otros_otrosproc_AnexoModificar.png"></p><p>En la pantalla anterior, se pueden apreciar los datos que pueden causar alguna alteración dentro del anexo, muestra el salario recibido por el trabajador, los meses trabajados, el Seguro Educativo y el ISR retenido y los ajustes respectivos, ya sea a favor del fisco o del trabajador.  De estos datos, los únicos que puede modificar directamente son los meses trabajados, la clave de ISR, agregar Intereses por préstamos hipotecarios, educativos, seguro de hospitalización, aportes a fondo de jubilación e ISR crédito del año anterior.  Los salarios recibidos, seguro educativo e ISR retenido deben ser modificados en la pantalla de Ajustes a Acumulados.<p><span class="header3">3. Preparar Archivo para eTax 2.0</span><br>Esta opción permite generar el archivo para el sistema eTax 2.0 de la Dirección General de Ingresos (DGI), solo siga los siguientes pasos: <br><ol><li>Tome la opción  <i>Otros|Otros Procesos|Anexo 03|Archivo para eTax 2.0.</i><br><li>Escoja en qué formato desea guardar el Anexo 03, puede ser en MS-Excel o Texto.<br><li>Guarde el archivo, notará que PayDay lo genera con un nombre predefinido, le recomendamos que no lo cambie, pues es el nombre que espera leer el programa eTax 2.0, al hacer la importación.<br><li>Realice la declaración del Anexo 03.<br></ol><p><br><span class="header3">4. Postear</span><br> El Posteo del Anexo 03 en PayDay es una opción que le permite realizar automáticamente varias funciones:<br><ol><li> Imprime el cheque para pagar al fisco las diferencias que hayan quedado pendientes por pagar<br><li> Permite que PayDay guarde en cada empleado los valores que le quedaron como crédito -por haber descontado ISR de más.   Se registra en el campo ISR en Crédito del Año Anterior que se encuentra en <i>Mantenimiento|Empleados|Ajustes a los Acumulados, pestaña Acumulados</i>.<br><li> Crea las deudas o descuentos que deben realizarse a los trabajadores por los montos dejados de descontar en ISR.   Para estos casos es sumamente importante que se tenga creado (si no lo tiene, lo debe hacer) un acreedor llamado ADELAN, que debe configurar como <u>Es la Compañía</u>.  <p>La deuda se crea con las siguientes especificaciones:<br><ul><li> Código de Acreedor = ADELAN<br><li> Código de la Deuda  = !<br><li> Prioridad                   = 4<br><li> Tipo de Deuda          =  ADELANTO <br><li> Descuento                = 5 %<br></ul><p>Si la empresa prefiere utilizar otra forma de hacer el descuento, usted puede modificar el valor a descontar, ya sea colocando un valor fijo, un monto por mes o un porcentaje (%) diferente.<p>El posteo del Anexo 03 es una opción obligatoria sólo para las empresas que desean que PayDay realice estos ajustes automáticamente, de lo contrario, el usuario puede hacer estas anotaciones cuando crea conveniente y/o necesario. <p><b>Importante:</b> Recuerde que para que PayDay haga los ajustes en el posteo, en <i>Mantenimiento|Configuración|Opciones|Opciones Generales</i>, debe estar activada <img src="images\Botones\Activado.png"> la opción Ajustar el Anexo 03 automáticamente.<br>
+</div>
+						</div>
+				</div>
+				</article>
+					 <hr />
+					 <div><a href="http://www.payday.com.pa"><img width=11% align=right src="images/logo.png"/></a></div>
+				<small>
+						  &copy; Sosa y Cía, S.A., 1996-2025 &bull;
+						  Última actualización: 12/22/21
+						  <br />
+					 </small>		
+				<br class="clearfix" />
+					 <br />
+					 <!-- End Rendered Content -->
+				</div>
+		  </div>		  
+	 </div>
+
+
+<div style="position: absolute; left: 0; bottom: 0; padding: 8px; background-color: #333; color: white; display:block !important; font-size: 11pt; border-radius-top-right: 3px; box-shadow: 3px 3px 8px #535353;opacity: 0.87" data-id="hbp">	
+	<a href="http://helpbuilder.west-wind.com/" target="_helpbuilder">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAFTklEQVR4Xt3TW2wcZxnG8f83M7szs7sz68M6PgUrbp0El7ZJG1Kq1LiyAmqIDaEpBkFUKRI0SE2LlEr0AirccNEUqghRJECUcugFbWQQIXCRCCiqiB1aQkSjOE5iJ44TH2Lv2uvd2eOcPnIRS16pXCAhLvjdvO/V+1w8evmfO3bsqHn69NctKRH8FwiAAwcORPZ/1ntmY2f1y8mEu1lVAwEiL+CkUNXvdu3ZoCwtVvcFaD2ReCLS/+LnYlMnz/s3zlw7byXiJzvvT/z6Dz/5aokPIIaGhrTeLePH+x72+4WgFhBK4fcfNNRTp6Milqzj3v4d7HzhcbwVh5FXTjF95jqy6i/UWe7Q4IB47fDhwyFrKLqYeKLno97qcULJWCYbHXU9CYAipHbkOcT2Jx6h56ldbNv3KF4+xK2EjJ+6gKqC61aa09nwxz8frgwPDByI1QTc0+l+MhoRAEiJFGpkz859Ky8f+12GVXd3SLp2dNO6qZWgUKS8lEXTY3xx+Fk2fOp+orZJWIVSIbL3/Sv68ODgoModWiq5/dB7l8QLABE1G3zn6Gi8577CG7v62lh1I2tTyuVRQx/fd9ECF7/qYthxtg4+xPzFa7hhldJiAbdq7h49V/c8cARAsMbzzz6+/uB+OdLRpnRwx/yyzosnHmLGb8NIJrCUADNmYN7eg1gdYcLi9SdfYcund/DuW6MgBBqV4uZ1E3dfuPD2gsIaW+91v7Z6XEoYm27lz+e3c7sT3EKZas6hXKiQ9Jb5eJtHPDfDzF9GeGD3VvLpDCglkCV8ZHzesQ8CaKyhm2p3GALA2bEIvzoRJZGsUC98mpIQr1Ox4grrGyS9m0v4XoTZOZWxv/2DhVkHEYJAwVACwjC2B/iWYI2u7p2vrd9411fK5YAmK0JDXGEpD4rViIwlWAl1ohGFhA4tSYEZ11kJDEqGzdvfexOvHAAKughRVN/t7dlqaazx1D7jvq4NWbxKFRWD9851cH0uC64DpZD2VptiqFIoCG56Klq+imqCcAPMtnqyV2eoV3y0iETTiKZSTnNNB9u6Zf3enSFf6I+w40GfDe0pJBpGNIrjVBifzFDOOrQkJM1WiKmGVEouN8enyVydpG3jhwiisD7l8eFuGzBrOxCKyiqpRDj+zjSBiJKrhDSYGreKPgsZh3S2gG6aJOtM6u2QSvYSW7p0DHuJhk90cVdDDiPVXklPpW8J1vjNG3t+v7nLHljOeSxlVV76WQuaKvFEBA2JrqtkClVk4OJWXEw7jqZH8dwyE++8i2YbCFmhyQIjqv1z/NLIA0rNH7xa//RLv9zkP/dqJy8f66ZY9licm+PG+EWKrsQPIRWLcuvyJNPnzjIzdoGFqSnSU9cJ/RKpthS6ZbG0VEJf13kcoCbg6tlf3Hz/cuatpkabhoTEXtdKPlskOzfPxJkRVpwqjuNgqUWkhEJ6gdzsLG7eQWiC0u3pzM+CYThNjc0/AtCoxbKz/M2Gcv1n3FC31ZUrtNS7NFsWxaLP8vWLtG/qpuRrtDeZLC47qJqGbteBrpJfvEXgl4k3dh/542+PLgIIPsA9jz4z2NDU8mYuW1Yv//VPqGoEOyEwDAiR5PKScrlKY1Lg+z45x0NKj1B6JJqbTzzWc2jv8PDng9qAWjw88O0vZaav/PTm5QkTBCAJZYBEAgABAlCVEMsUVN0qFczhjraeJycnf1DlDsG/x5a+pz8yf2Xyh+VCtdctV5BIpJRIQgQ+AMgQFNIR0/pGKTf6OiD5Tz24+/DH7MZd348l+/5uWL1pM/5INmb1Xk3U952wmh7b37ptKMb/rX8BL2lNNiGFZBEAAAAASUVORK5CYII="
+ style="float: left; margin-right: 15px;"/>
+	</a>
+	This page was generated by the shareware version of <a href="http://helpbuilder.west-wind.com/" target="_helpbuilder" style="color: cornsilk;font-weight: bold;">West Wind Html Help Builder</a>.	
+</div></body>
+</html>

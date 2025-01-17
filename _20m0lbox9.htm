@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+<head> 
+		<meta charset="utf-8" /> 
+	 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	 	<title>Extra-ordinaria - PayDay Help</title>	 
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+		<!-- <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js#startOpened,overrideConsole"></script> -->
+	<link rel="stylesheet" type="text/css" href="templates/scripts/bootstrap/dist/css/bootstrap.min.css" />	
+	<link rel="stylesheet" type="text/css" href="templates/scripts/fontawesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="templates/wwhelp.css" />
+
+	 	<script src="templates/scripts/jquery/jquery.min.js"></script>	
+
+		<script src="templates/scripts/highlightjs/highlight.pack.js"></script>
+	<script src="templates/scripts/highlightjs-badge.min.js"></script> 
+	<link href="templates/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+  	<script src="templates/scripts/ww.jquery.min.js"></script>
+
+	 <script src="templates/scripts/wwhelp.js"></script>
+
+	<topictype value="Topictype" />
+	<script>		  
+	$(document).ready( function() {
+		helpBuilder.initializeLayout();
+		// expand all top level topics
+		setTimeout( helpBuilder.tocExpandTop, 2);
+	});
+	</script>
+</head>
+<body style="background-color:#F5FAFF;">
+
+	 <div class="flex-master">
+	<div class="banner">
+				<img src="images/escudo.png" class="banner-logo" />
+				<div class="projectname">PayDay Help</div>
+
+		  </div>
+
+		  <div class="page-content">
+				<nav class="topic-outline">
+				<div class="topic-outline-header">En esta página:</div>
+					 <div class="topic-outline-content"></div>
+				</nav>
+		  <div class="splitter"></div>
+		  <div class="main-content">
+
+				<!-- Rendered Content -->
+				<article class="content-pane">
+				<div class="row">
+					<div class="column left just">
+					</div>
+						<div class="column center just">
+
+
+<header class="content-title">
+	 <img src=images\Topic.png>
+Extra-ordinaria
+</header>
+
+<div class="content-body" id="body"><p>La planilla Extraordinaria en PayDay, es una planilla auxiliar, porque puede tener diferentes utilidades.  Por ejemplo, se puede utilizar para pagar una planilla regular a uno o más trabajadores, se pueden pagar comisiones, gastos de representación, viáticos, transporte o algún otro pago especial que no se desee incluir en la planilla regular, inclusive participación en las utilidades. <p>Antes de comenzar una planilla extraordinaria asegúrese que el empleado no esté en otra planilla en proceso.<p>Tome la opción <i>Planillas|Extraordinaria|Generar Transacciones</i> y coloque los datos necesarios para la generación de la misma. <p><p align="CENTER"><img align="center"src="images\Planillas\generar_extraordinaria.png"> </p><p>
+<table  border="1" width="90%">
+<tr>   
+  <th>Campo</th>
+  <th>Descripción</th>
+</tr>
+<tr>
+  <td Nowrap>Generar Planilla para</td>
+  <td>En este campo se debe seleccionar el grupo del cual haremos la selección de los trabajadores a incluir en la planilla extraordinaria, que se procede a generar, las opciones son: 
+<ul><li> Todos, para incluir a todos los trabajadores o para escoger a algunos de entre todos los trabajadores, 
+<li> Semanal, para seleccionar a los trabajadores que se les paga semanalmente
+<li> Bisemanal, para seleccionar a los trabajadores que  se les paga cada dos semanas
+<li> Quincenal, para seleccionar a los trabajadores que se les paga quincenalmente
+<li> Mensual, para seleccionar a los trabajares que se les paga una sola vez al mes.
+</ul></td>
+</tr>
+<tr>
+  <td>Inicio del Período</td>
+  <td>Corresponde a la fecha inicial de la planilla a realizar.</td>
+</tr>
+<tr>
+  <td>Final del Período</td>
+  <td>Es la fecha final de la planilla a realizar.</td>
+</tr>
+<tr>
+  <td >Fecha de la Planilla</td>
+  <td>Es la fecha de la planilla, con la cual se grabará el registro del pago a cada trabajador.</td>
+</tr>
+<tr>
+  <td >Generada por: </td>
+  <td>Coloca y guarda el usuario que está generando la planilla.</td>
+</tr>
+<tr>
+  <td >Lista Izquierda: </td>
+  <td>Muestra los trabajadores disponibles que se pueden incluir en la planilla.</td>
+</tr>
+<tr>
+  <td >Lista Derecha: </td>
+  <td>Muestra los trabajadores ya seleccionados para incluirlos en la planilla extraordinaria a pagar.  Para seleccionarlos, sólo colóquese en la lista izquierda, dé un doble click sobre el trabajador a seleccionar y enseguida pasa a la lista de seleccionados (derecha).  También puede hacer la selección usando los botones <img src="images\Botones\seleccionar_uno.png">  para seleccionar solo uno y  <img src="images\Botones\seleccionar_todos.png">  para seleccionarlos todos. </td>
+</tr>
+
+</table>
+<br>En la pantalla de selección, inicialmente solo saldrán los empleados Activos, pero con la opción "Ver otros empleados", que está en la parte superior derecha de la pantalla, puede agregar a los que están de Vacaciones, de Licencia o Suspendido, para que se incluyan en su extraordinaria.  <br>Cuando tenga lista la selección de los trabajadores y completos todos estos datos, puede continuar con los pasos, al igual que con cualquier otra planilla regular. <p><br><span class="header3">Posteo de la Planilla Extraordinaria</span><br>Cada vez que se postea una planilla regular, se actualiza la fecha del último día pagado al trabajador, fecha importante ya que se utiliza para obtener el promedio de los salarios recibidos cuando hacemos la proyección en el cálculo del Impuesto Sobre la Renta. <p>En la planilla extraordinaria, por ser una planilla con la cual se pueda pagar cualquier tipo de ingreso y con cualquier fecha del mes, PayDay no actualiza la fecha del último día pagado automáticamente, como lo hace con las planillas regulares.  Sin embargo, justo antes de procesar el posteo, le pregunta al usuario si desea que se modifique esta fecha o no.<p><p align="CENTER"><img src="images\Planillas\postear_extraordinaria.png"></p><p><br>La respuesta a esta pregunta, va a depender de que tipo de pago usted esté realizando al trabajador; por ejemplo, si es salario regular, muy probablemente si será necesario cambiar la fecha, sin embargo, si es bonificación o gratificación, muy probablemente no debería cambiarse la fecha del último día pagado. <br>
+</div>
+						</div>
+				</div>
+				</article>
+					 <hr />
+					 <div><a href="http://www.payday.com.pa"><img width=11% align=right src="images/logo.png"/></a></div>
+				<small>
+						  &copy; Sosa y Cía, S.A., 1996-2025 &bull;
+						  Última actualización: 03/15/22
+						  <br />
+					 </small>		
+				<br class="clearfix" />
+					 <br />
+					 <!-- End Rendered Content -->
+				</div>
+		  </div>		  
+	 </div>
+
+
+<div style="position: absolute; left: 0; bottom: 0; padding: 8px; background-color: #333; color: white; display:block !important; font-size: 11pt; border-radius-top-right: 3px; box-shadow: 3px 3px 8px #535353;opacity: 0.87" data-id="hbp">	
+	<a href="http://helpbuilder.west-wind.com/" target="_helpbuilder">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAFTklEQVR4Xt3TW2wcZxnG8f83M7szs7sz68M6PgUrbp0El7ZJG1Kq1LiyAmqIDaEpBkFUKRI0SE2LlEr0AirccNEUqghRJECUcugFbWQQIXCRCCiqiB1aQkSjOE5iJ44TH2Lv2uvd2eOcPnIRS16pXCAhLvjdvO/V+1w8evmfO3bsqHn69NctKRH8FwiAAwcORPZ/1ntmY2f1y8mEu1lVAwEiL+CkUNXvdu3ZoCwtVvcFaD2ReCLS/+LnYlMnz/s3zlw7byXiJzvvT/z6Dz/5aokPIIaGhrTeLePH+x72+4WgFhBK4fcfNNRTp6Milqzj3v4d7HzhcbwVh5FXTjF95jqy6i/UWe7Q4IB47fDhwyFrKLqYeKLno97qcULJWCYbHXU9CYAipHbkOcT2Jx6h56ldbNv3KF4+xK2EjJ+6gKqC61aa09nwxz8frgwPDByI1QTc0+l+MhoRAEiJFGpkz859Ky8f+12GVXd3SLp2dNO6qZWgUKS8lEXTY3xx+Fk2fOp+orZJWIVSIbL3/Sv68ODgoModWiq5/dB7l8QLABE1G3zn6Gi8577CG7v62lh1I2tTyuVRQx/fd9ECF7/qYthxtg4+xPzFa7hhldJiAbdq7h49V/c8cARAsMbzzz6+/uB+OdLRpnRwx/yyzosnHmLGb8NIJrCUADNmYN7eg1gdYcLi9SdfYcund/DuW6MgBBqV4uZ1E3dfuPD2gsIaW+91v7Z6XEoYm27lz+e3c7sT3EKZas6hXKiQ9Jb5eJtHPDfDzF9GeGD3VvLpDCglkCV8ZHzesQ8CaKyhm2p3GALA2bEIvzoRJZGsUC98mpIQr1Ox4grrGyS9m0v4XoTZOZWxv/2DhVkHEYJAwVACwjC2B/iWYI2u7p2vrd9411fK5YAmK0JDXGEpD4rViIwlWAl1ohGFhA4tSYEZ11kJDEqGzdvfexOvHAAKughRVN/t7dlqaazx1D7jvq4NWbxKFRWD9851cH0uC64DpZD2VptiqFIoCG56Klq+imqCcAPMtnqyV2eoV3y0iETTiKZSTnNNB9u6Zf3enSFf6I+w40GfDe0pJBpGNIrjVBifzFDOOrQkJM1WiKmGVEouN8enyVydpG3jhwiisD7l8eFuGzBrOxCKyiqpRDj+zjSBiJKrhDSYGreKPgsZh3S2gG6aJOtM6u2QSvYSW7p0DHuJhk90cVdDDiPVXklPpW8J1vjNG3t+v7nLHljOeSxlVV76WQuaKvFEBA2JrqtkClVk4OJWXEw7jqZH8dwyE++8i2YbCFmhyQIjqv1z/NLIA0rNH7xa//RLv9zkP/dqJy8f66ZY9licm+PG+EWKrsQPIRWLcuvyJNPnzjIzdoGFqSnSU9cJ/RKpthS6ZbG0VEJf13kcoCbg6tlf3Hz/cuatpkabhoTEXtdKPlskOzfPxJkRVpwqjuNgqUWkhEJ6gdzsLG7eQWiC0u3pzM+CYThNjc0/AtCoxbKz/M2Gcv1n3FC31ZUrtNS7NFsWxaLP8vWLtG/qpuRrtDeZLC47qJqGbteBrpJfvEXgl4k3dh/542+PLgIIPsA9jz4z2NDU8mYuW1Yv//VPqGoEOyEwDAiR5PKScrlKY1Lg+z45x0NKj1B6JJqbTzzWc2jv8PDng9qAWjw88O0vZaav/PTm5QkTBCAJZYBEAgABAlCVEMsUVN0qFczhjraeJycnf1DlDsG/x5a+pz8yf2Xyh+VCtdctV5BIpJRIQgQ+AMgQFNIR0/pGKTf6OiD5Tz24+/DH7MZd348l+/5uWL1pM/5INmb1Xk3U952wmh7b37ptKMb/rX8BL2lNNiGFZBEAAAAASUVORK5CYII="
+ style="float: left; margin-right: 15px;"/>
+	</a>
+	This page was generated by the shareware version of <a href="http://helpbuilder.west-wind.com/" target="_helpbuilder" style="color: cornsilk;font-weight: bold;">West Wind Html Help Builder</a>.	
+</div></body>
+</html>

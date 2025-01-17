@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+<head> 
+		<meta charset="utf-8" /> 
+	 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	 	<title>Décimo III - PayDay Help</title>	 
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+		<!-- <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js#startOpened,overrideConsole"></script> -->
+	<link rel="stylesheet" type="text/css" href="templates/scripts/bootstrap/dist/css/bootstrap.min.css" />	
+	<link rel="stylesheet" type="text/css" href="templates/scripts/fontawesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="templates/wwhelp.css" />
+
+	 	<script src="templates/scripts/jquery/jquery.min.js"></script>	
+
+		<script src="templates/scripts/highlightjs/highlight.pack.js"></script>
+	<script src="templates/scripts/highlightjs-badge.min.js"></script> 
+	<link href="templates/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+  	<script src="templates/scripts/ww.jquery.min.js"></script>
+
+	 <script src="templates/scripts/wwhelp.js"></script>
+
+	<topictype value="Topictype" />
+	<script>		  
+	$(document).ready( function() {
+		helpBuilder.initializeLayout();
+		// expand all top level topics
+		setTimeout( helpBuilder.tocExpandTop, 2);
+	});
+	</script>
+</head>
+<body style="background-color:#F5FAFF;">
+
+	 <div class="flex-master">
+	<div class="banner">
+				<img src="images/escudo.png" class="banner-logo" />
+				<div class="projectname">PayDay Help</div>
+
+		  </div>
+
+		  <div class="page-content">
+				<nav class="topic-outline">
+				<div class="topic-outline-header">En esta página:</div>
+					 <div class="topic-outline-content"></div>
+				</nav>
+		  <div class="splitter"></div>
+		  <div class="main-content">
+
+				<!-- Rendered Content -->
+				<article class="content-pane">
+				<div class="row">
+					<div class="column left just">
+					</div>
+						<div class="column center just">
+
+
+<header class="content-title">
+	 <img src=images\Topic.png>
+Décimo III
+</header>
+
+<div class="content-body" id="body"><p>El Décimo Tercer Mes es una bonificación especial calculada sobre la base de un día de salario por cada once (11) días trabajados.  Se incluyen los valores pagados en conceptos de salarios, enfermedad, vacaciones y licencias y debe pagarse en tres partidas proporcionales, el 15 de abril, 15 de agosto y 15 de diciembre de cada año.  (Decreto No. 221 de 18 de noviembre de 1971).   <p>Hacer la planilla de Décimo Tercer Mes es muy sencillo,  veamos:<p><span class="header3">1. Verificar que la partida de XIII Mes a pagar, sea la correcta</span>. Para ello, debe verificar el campo "Ultimo XIII Mes pagado", que se encuentra en <i>Mantenimiento|Configuración|Datos Generales de la Compañía</i>.  Este valor se actualiza automáticamente, cada vez que se postea una planilla de XIII Mes, por lo que una vez configurado, no necesitará cambios manuales; sin embargo, no está de más revisarlo antes de hacer la planilla. <p><span class="header3">2. Tome la opción <i>Informes|Empleados|Detalle para XIII Mes</i></span>, imprima el reporte y revise los datos.  <p><p align="CENTER"><img src="images\Planillas\decimo\detalleparadecimo.png"></p><p>Éste informe muestra los salarios que el trabajador ha ganado en cada uno de los meses involucrados en la partida a pagar, luego los suma y lo presenta en la columna Este Acumulado, la siguiente columna muestra cuánto sería el XIII Mes basado en Este Acumulado y por último, muestra el Acumulado Según el archivo, que es el valor que realmente se utilizará para el pago. <p>Por lo tanto, las columnas <u>Este Acumulado</u> y <u>Acumulado según el Archivo</u> siempre deberían coincidir, excepto en los casos en que en el décimo anterior se hubiese pagado por adelantado, utilizando proyección. En este caso sólo corresponde verificar que las diferencias sean los valores que quedaron pendientes por pagar o descontar en el décimo anterior, luego que se ajustó la proyección. <p>Si luego de la revisión se detectan diferencias y no son por que se hubiese trabajado con proyección, es porque se registró pagos de salario manualmente, sin que PayDay hiciera las planillas. Recuerde que si incluyen valores manualmente en la pantalla de ajustes a los acumulados, éstos no se suman automáticamente en los campos de Salario Acumulado para calcular Vacaciones y Décimo Tercer Mes. <p><span class="header3">3. Recalcular Acumulados para Décimo Tercer Mes</span><br> Es un proceso que modifica automáticamente el acumulado para XIII mes tomando todos los registros de las planillas realizadas dentro del periodo que cubre la partida de XIII Mes a pagar, los totaliza y guarda en los campos de Salario y  Gasto de Representación acumulados para XIII Mes.<p>Esta opción la encuentra en <i>Otros|Otros Procesos|Recalcular Acumulados XIII Mes</i>, coloque las fechas que comprenden el décimo a pagar y revise los cambios que se efectuarían si decide o no recalcular. <br> <br><span class="header3">4. Generar la planilla de Décimo Tercer Mes</span><p><p align="CENTER"><img src="images\Planillas\decimo\generacion.png"></p><br>Veamos las variables que interfieren en la generación del Décimo Tercer Mes<p>
+<ol>
+<li> Verifique si la partida a pagar concuerda con la que se muestra en su pantalla, de igual forma revise que las fechas del mismo sean las correctas.
+
+<li> Indique si desea proyectar el salario base de los empleados hasta la fecha indicada. Esta es una característica especial de PayDay, que permite hacer una proyección del salario base del trabajador e incluirlo en el pago del XIII Mes. Esto nos ayuda a pagarlo fácilmente por adelantado y al hacerlo, es posible que cuando llegue la fecha en que realmente se debió pagar, encontremos algunos casos en que se les pagó décimo de más o de menos, en ese momento, podemos entonces pagar la diferencia pendiente o si se prefiere, dejarla en el  acumulado para la próxima partida.
+
+<li> Seleccione <img src="images\Botones\OK.png"> para  Generar o <img src="images\Botones\Cancelar1.png"> para salir sin generar.
+</ol>
+<p><br><span class="header3">5. Mejoras al Décimo Tercer Mes</span><p><p align="CENTER"><img src="images\Planillas\decimo\mejora.png"></p><p>En la pantalla podemos revisar los valores a pagar en Décimo Tercer del Salario, del Gasto de Representación y también podemos agregar "mejoras al décimo tercer mes", que no son más que bonificaciones especiales que la empresa quisiera entregar a los trabajadores, en el pago del XIII Mes.  Este campo no debe utilizarse para incluir otro ingreso que no sea específicamente mejoras al décimo, porque entonces no se le daría el tratamiento apropiado.<p>Como se puede apreciar en la figura anterior, también podemos revisar y/o modificar el Ingreso Proyectado que se está considerando para cada trabajador. <br>Luego de la revisión requerida, continuamos con los demás pasos de la planilla, de igual forma como lo hacemos con una planilla regular, tomamos Borrador, luego Vouchers, Informes al Banco, Respaldo de Archivos y Cheques / Postear.<br>
+</div>
+						</div>
+				</div>
+				</article>
+					 <hr />
+					 <div><a href="http://www.payday.com.pa"><img width=11% align=right src="images/logo.png"/></a></div>
+				<small>
+						  &copy; Sosa y Cía, S.A., 1996-2025 &bull;
+						  Última actualización: 10/01/21
+						  <br />
+					 </small>		
+				<br class="clearfix" />
+					 <br />
+					 <!-- End Rendered Content -->
+				</div>
+		  </div>		  
+	 </div>
+
+
+<div style="position: absolute; left: 0; bottom: 0; padding: 8px; background-color: #333; color: white; display:block !important; font-size: 11pt; border-radius-top-right: 3px; box-shadow: 3px 3px 8px #535353;opacity: 0.87" data-id="hbp">	
+	<a href="http://helpbuilder.west-wind.com/" target="_helpbuilder">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAFTklEQVR4Xt3TW2wcZxnG8f83M7szs7sz68M6PgUrbp0El7ZJG1Kq1LiyAmqIDaEpBkFUKRI0SE2LlEr0AirccNEUqghRJECUcugFbWQQIXCRCCiqiB1aQkSjOE5iJ44TH2Lv2uvd2eOcPnIRS16pXCAhLvjdvO/V+1w8evmfO3bsqHn69NctKRH8FwiAAwcORPZ/1ntmY2f1y8mEu1lVAwEiL+CkUNXvdu3ZoCwtVvcFaD2ReCLS/+LnYlMnz/s3zlw7byXiJzvvT/z6Dz/5aokPIIaGhrTeLePH+x72+4WgFhBK4fcfNNRTp6Milqzj3v4d7HzhcbwVh5FXTjF95jqy6i/UWe7Q4IB47fDhwyFrKLqYeKLno97qcULJWCYbHXU9CYAipHbkOcT2Jx6h56ldbNv3KF4+xK2EjJ+6gKqC61aa09nwxz8frgwPDByI1QTc0+l+MhoRAEiJFGpkz859Ky8f+12GVXd3SLp2dNO6qZWgUKS8lEXTY3xx+Fk2fOp+orZJWIVSIbL3/Sv68ODgoModWiq5/dB7l8QLABE1G3zn6Gi8577CG7v62lh1I2tTyuVRQx/fd9ECF7/qYthxtg4+xPzFa7hhldJiAbdq7h49V/c8cARAsMbzzz6+/uB+OdLRpnRwx/yyzosnHmLGb8NIJrCUADNmYN7eg1gdYcLi9SdfYcund/DuW6MgBBqV4uZ1E3dfuPD2gsIaW+91v7Z6XEoYm27lz+e3c7sT3EKZas6hXKiQ9Jb5eJtHPDfDzF9GeGD3VvLpDCglkCV8ZHzesQ8CaKyhm2p3GALA2bEIvzoRJZGsUC98mpIQr1Ox4grrGyS9m0v4XoTZOZWxv/2DhVkHEYJAwVACwjC2B/iWYI2u7p2vrd9411fK5YAmK0JDXGEpD4rViIwlWAl1ohGFhA4tSYEZ11kJDEqGzdvfexOvHAAKughRVN/t7dlqaazx1D7jvq4NWbxKFRWD9851cH0uC64DpZD2VptiqFIoCG56Klq+imqCcAPMtnqyV2eoV3y0iETTiKZSTnNNB9u6Zf3enSFf6I+w40GfDe0pJBpGNIrjVBifzFDOOrQkJM1WiKmGVEouN8enyVydpG3jhwiisD7l8eFuGzBrOxCKyiqpRDj+zjSBiJKrhDSYGreKPgsZh3S2gG6aJOtM6u2QSvYSW7p0DHuJhk90cVdDDiPVXklPpW8J1vjNG3t+v7nLHljOeSxlVV76WQuaKvFEBA2JrqtkClVk4OJWXEw7jqZH8dwyE++8i2YbCFmhyQIjqv1z/NLIA0rNH7xa//RLv9zkP/dqJy8f66ZY9licm+PG+EWKrsQPIRWLcuvyJNPnzjIzdoGFqSnSU9cJ/RKpthS6ZbG0VEJf13kcoCbg6tlf3Hz/cuatpkabhoTEXtdKPlskOzfPxJkRVpwqjuNgqUWkhEJ6gdzsLG7eQWiC0u3pzM+CYThNjc0/AtCoxbKz/M2Gcv1n3FC31ZUrtNS7NFsWxaLP8vWLtG/qpuRrtDeZLC47qJqGbteBrpJfvEXgl4k3dh/542+PLgIIPsA9jz4z2NDU8mYuW1Yv//VPqGoEOyEwDAiR5PKScrlKY1Lg+z45x0NKj1B6JJqbTzzWc2jv8PDng9qAWjw88O0vZaav/PTm5QkTBCAJZYBEAgABAlCVEMsUVN0qFczhjraeJycnf1DlDsG/x5a+pz8yf2Xyh+VCtdctV5BIpJRIQgQ+AMgQFNIR0/pGKTf6OiD5Tz24+/DH7MZd348l+/5uWL1pM/5INmb1Xk3U952wmh7b37ptKMb/rX8BL2lNNiGFZBEAAAAASUVORK5CYII="
+ style="float: left; margin-right: 15px;"/>
+	</a>
+	This page was generated by the shareware version of <a href="http://helpbuilder.west-wind.com/" target="_helpbuilder" style="color: cornsilk;font-weight: bold;">West Wind Html Help Builder</a>.	
+</div></body>
+</html>

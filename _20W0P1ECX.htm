@@ -1,0 +1,43 @@
+
+	
+<html>
+<head>
+<title>Datos Principales</title>
+<LINK rel="stylesheet" type="text/css" href="templates/wwhelp.css">
+</head>
+<body topmargin=0 leftmargin=0>
+<table border=0 width="100%" bgcolor="lightblue" class="banner">
+<tr><td valign="center">
+<span style="font:8pt Verdana"><i>PayHelp</i></span></td></tr>
+<tr><td><span style="font:10pt Verdana"><b>Datos Principales</b></span>
+</td></tr>
+</table>
+
+<div style="margin-left:10pt;margin-right=10pt">
+
+
+
+<p>
+
+
+<br><p>
+<div class="body">Los Datos principales del trabajador incluyen los siguientes campos:<p><img src="images\mant\empleados\emp_principales.png" ><p><table border="1" width="90%"><tr>     <th>Campo</th>   <th>Descripción</th></tr><tr>  <td>Código</td>  <td>Identifica al empleado en el sistema, cada uno tiene un código único y después de que se ha guardado, no puede ser modificado.  El trabajador debe tener siempre el mismo código, aunque lo recontratemos varias veces.<p>En PayDay los códigos no deben tener más de 6 caracteres y puede ser alfanumérico. Es preferible que no contengan signos de puntuación ni espacios intercalados. </p><p>Si su empresa no tiene una codificación establecida, recomendamos que el código esté integrado por las tres primeras letras del apellido del empleado, seguido de un número secuencial de tres posiciones. De  ésta forma podrá tener 999 opciones para trabajadores que sus primeras tres letras del apellido coincidan. </p>Ejemplo: <br> ALO001, para  JUAN ALOMAR<br> AGU001, para  CARLOS AGUIRRE<br> AGU002, para  PEDRO AGUIRRE</tr></td></tr><tr>  <td>Nombre y Apellido </td>  <td>Es el nombre del trabajador, debe escribirse sin signos de puntuación.</td></tr><tr>  <td>Seguro Social</td> <td>Coloque el número de Seguro Social que le ha sido asignado al empleado en la Caja de Seguro Social, con sus respectivos guiones. En los casos en que éste número coincida con la cédula, coloque el número de cédula. </td></tr><tr>  <td>Cédula </td> <td> Coloque el número de cédula del trabajor, con sus respectivos guiones tal como aparece en el documento de identidad.  Si el trabajador es extranjero y no tiene aún un número de cédula, coloque aquí el número de pasaporte.<span style="Font:Normal 14pt Tahoma;Color:#0000FF"><b>DAR EJEMPLOS</b></span></td></tr><tr>  <td>Es Pasaporte? </td> <td>  Debe activar ésta opción con un gancho <img align= middle src="images\botones\activado.png">, para indicar que el número que se ha digitado en el campo cédula, es un pasaporte; ya que será necesario para indicarlo así en la planilla prelaborada de la CSS.</td></tr><tr>  <td>Ultima Ced. Reportada  </td> <td> Debe ser el mismo número de cédula del empleado.  Si por error, se reporta a la CSS un número de cédula incorrecto, para la siguiente prelaborada, no cambie éste valor, solo cambie el campo Cédula y PayDay se encargará de dar aviso a la CSS que hay cambio en el número de cédula del trabajador, en la siguiente prelaborada.</td></tr><tr>  <td>DV</td>  <td>Dígito Verificador otorgado a cada persona por la Dirección General de Ingresos.  Se requiere para la preparación del Anexo 03. si no lo tiene, busquelo en la página web de la  <a href="https://www.dgi.gob.pa/defaultsecure.asp" target="top">Dirección General de Ingresos - DGI</a></td> </tr><tr>  <td Nowrap>Grupo de ISR y # de Dependientes</td>  <td>Estos dos campos conforman la clave de Impuesto Sobre la Renta del empleado.  Seleccione el grupo según corresponda y coloque la cantidad de dependientes que declara el trabajador. </td></tr><tr>  <td>Grupo de Pago</td>  <td>Seleccione de acuerdo a la frecuencia de pago, el grupo al que pertenece cada empleado, ya sea Semanal, Bisemanal, Quincenal o Mensual.</td></tr><tr>  <td>Status</td>  <td>Indica el estado actual del trabajador, ya sea Activo, de Vacaciones, Suspendido, de Licencia o Cesante.  Si coloca cesante, PayDay le solicitará la fecha en que fue liquidado.</td></tr><tr>  <td>Sucursal</td>  <td>La utilización de sucursales es opcional, se usa si se requiere crear una clasificación de los trabajadores a nivel superior de los departamentos,  nos permite imprimir la planilla dividida por sucursales. Para asignar al trabajador a una sucursal, ésta debe estar previamente creadas, vea <opciones>Mantenimiento | Sucursales</opciones>. </td></tr><tr>  <td>Departamento</td>  <td>Asignar a los trabajadores por departamentos, nos permite imprimir la planilla dividida por departamentos y así tambien obtener los totales de la misma. Para asignar al trabajador a un departamento, éstos deben estar creados con anterioridad, vea <opciones>Mantenimiento | Departamentos </opciones>.</td></tr><tr>  <td>Centro de Costo</td>  <td>Indica en que grupo se clasificarán los gastos del empleado, cuando se confeccione el Asiento Contable.  Para asignar al trabajador a su centro de costo, éste debe estar creado anticipadamente.</td></tr><tr>  <td>Tipo de Salario</td>  <td>Debe seleccionarse de acuerdo a lo pactado con el empleado, tal como conste en su contrato laboral = mensual o por hora.  Este campo tiene estrecha relación con el Salario Pactado, ya que si usted coloca que el salario pactado es B/.2.50 por Hora, debe colocar que el tipo de salario es Por Hora.</td></tr><tr>  <td>Tipo de Empleado</td>  <td>Indica la categoría del empleado = Permanente o Eventual.  Los empleados eventuales no se incluyen para los aportes al Fondo de Cesantía.</td></tr><tr>  <td>Salario Pactado</td>  <td>Debe reflejar el monto a pagar al empleado, y debe estar de acuerdo a su tipo de salario.  Si luego de grabar esta cantidad, requiere cambiarla, debe tomar la opción <opciones>Mantenimiento | Empleados | Cambiar Salarios</opciones>.</td></tr> <tr>  <td>Horas Base</td>  <td>Es la cantidad de horas regulares que el empleado debe trabajar de acuerdo a su grupo de pago.  Para los empleados quincenales o mensuales, que su salario ha sido pactado mensualmente, se calcula con la siguiente fórmula  <p><img src="images\mant\horas_base.bmp" align = left hspace=45></P></td></tr><tr>  <td>Fecha de Ingreso</td>  <td>Indica la fecha en que el trabajador inicia labores en la empresa, de acuerdo a su contrato de trabajo.</td></tr></tr><tr>  <td>Fecha de Vencimiento de Contrato</td>  <td>Si el empleado es eventual, PayDay calculará esta fecha a 3 meses después de su entrada a laborar.  Puede modificarla si el contrato tiene otra vigencia.</td></tr><tr>  <td>Fecha de Liquidación</td>  <td>Es la última fecha en que el trabajador cesó sus labores en la empresa.</td></tr><tr>  <td>Método de Cálculo de ISR</td>  <td>PayDay cuenta con diversos métodos para calcular el I.S.R. veamos: <ul><li> <h4>Promedio</h4>Con éste método PayDay obtiene el promedio de los salarios devengados y lo proyecta por los meses que falten en el año actual (Incluyendo el XIII Mes).  De esta forma determina el total que devengará en el año, para luego calcular la renta total a descontar anual y por último, la que se descontará en la planilla actual. <li> <h4>Inmediato</h4> Es recomendable para cuando hay ingresos adicionales, que no son pagados con regularidad -como Bonos o Participación en las Utilidades.  PayDay calculará el ingreso anual y realizará el descuento total de la renta que conlleve el recibir ese ingreso adicional, para no prorratearlo durante el resto del año. <li> <h4>Tabla</h4> Se basa en la aplicación exacta de las Tablas de Retenciones de Impuesto Sobre la Renta, de la DGI.  Utiliza el concepto que el total de salarios del mes en curso, es igual a todos los demas meses del año.<li> <h4>Tabla Modificada </h4>Es una variación de PayDay al método Tabla.  Su diferencia radica en que no asume que el ingreso adicional que se recibe en la(s) primera(s) planilla(s) del mes lo volverá a recibir en la(s) última(s) planilla(s) del mes.  Por ello, cuando se realiza la primera planilla, proyecta para la segunda, solo el salario base, no incluye el ingreso adicional -en la proyección-.<li> <h4>Fijo </h4> Con éste método el  usuario indica al sistema, cuanto descontar de ISR.<li> <h4>Adicional</h4>  Es un campo para colocar un valor adicional que se requiera descontar de ISR al trabajador.  Trabaja en conjunto con los demás métodos, excepto con el Fijo, que lo ignora.</ul></td></tr></table><br></div>
+<p>
+
+<table border="0" cellpadding="3" width="99%" class=".body">
+
+  
+
+  
+</table>
+
+
+
+
+</div>
+
+<hr>
+<span class="body"><small>Last Updated: <i>02/16/07</i></small></span>
+<p>&nbsp;<br></p>
+</body>
+</html>

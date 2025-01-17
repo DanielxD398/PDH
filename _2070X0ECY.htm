@@ -1,0 +1,43 @@
+
+	
+<html>
+<head>
+<title>Datos de las Vacaciones</title>
+<LINK rel="stylesheet" type="text/css" href="templates/wwhelp.css">
+</head>
+<body topmargin=0 leftmargin=0>
+<table border=0 width="100%" bgcolor="lightblue" class="banner">
+<tr><td valign="center">
+<span style="font:8pt Verdana"><i>PayDay Help</i></span></td></tr>
+<tr><td><span style="font:10pt Verdana"><b>Datos de las Vacaciones</b></span>
+</td></tr>
+</table>
+
+<div style="margin-left:10pt;margin-right=10pt">
+
+
+
+<p>
+
+
+<br><p>
+<div class="body"><img src="images\Planillas\Vacaciones\datosdevacac.png"><p>En esta pantalla es donde vamos a trabajar el pago de las vacaciones.  El sistema muestra los cálculos realizados de acuerdo a los datos proporcionados. Veremos en detalle cada uno de los datos involucrados. <p>1.	Vacaciones Disponibles<p>Nos indica en tiempo y en dinero, los días que el empleado tiene disponibles para tomar sus vacaciones.  Estos campos no se pueden modificar directamente en esta pantalla, son valores que PayDay calcula tomado como referencia las fechas de Vacaciones -Dinero pagado hasta y Tiempo tomado hasta, que se encuentra están en <span class="labels">Mantenimiento|Empleados|Datos generales del Empleado|Configuración</span>.<p>Ejemplo:   Una persona que inicia labores el 1 de enero de 2008, a los once meses tiene derecho a tomar treinta días de vacaciones; por ello, en Noviembre, cuando realizamos la planilla de vacaciones decimos:   Vacaciones correspondientes por el tiempo trabajado del 1 de enero de 2008 al 30 de noviembre de 2008.<br>		<br>Con este ejemplo, en el campo Tiempo tomado hasta debemos colocar 30/11/2008. Así cuando corresponda realizar la siguiente planilla de vacaciones, PayDay comenzará a contar desde ésta fecha y de esa forma se encargará de ir llevando el control del tiempo de vacaciones que el empleado tiene disponible.  Regularmente las fechas son las mismas en los dos campos, sólo si el empleado no toma la misma cantidad de tiempo y dinero de vacaciones, pueden variar; es decir, si se le pagan 30 días y toma libre sólo 15 días.<p>2.	Vacaciones que se van a Tomar <p>En esta sección es donde debemos indicar lo que realmente se va a pagar al empleado en vacaciones tanto en <b>tiempo</b> como en <b>dinero</b>.  Revise y cambie de ser necesario los valores que tiene en los siguientes campos:<p><table  border="1" width="90%"><tr><td nowrap>En Dinero</td><td >En éste campo se indica la cantidad de días que se van a pagar en Dinero al trabajador. Puede colocar 15 días, o por ejemplo 30 días que hacen un mes.  Al cambiar éste valor, PayDay recalcula la fecha final del Periodo Trabajado.</td></tr><tr><td >En Tiempo</td><td >En éste campo se indica cuantos días la persona va a tomar libre realmente en concepto de vacaciones.  Regularmente es igual al tiempo pagado en dinero.  Al cambiar éste valor, PayDay recalcula la fecha final del Período Libre que tendrá el trabajador. </td></tr><tr><td nowrap>Periodo Trabajado	</td><td >Corresponde al tiempo trabajado por el cual se está pagando los días de vacaciones de la planilla en proceso.  Se toma de referencia la fecha hasta la cual se le ha pagado vacaciones en Dinero y a partir de ella, se calcula la fecha final, basado en el tiempo que se le pagará.  </tr><tr><td nowrap>Periodo Libre</td><td >Inicio	El primer día libre de vacación.  Es el día calendario siguiente al último día de salario pagado al empleado.Hasta	Aquí se le indica al sistema la fecha hasta la cual el empleado se le deben pagar sus vacaciones, de acuerdo a los meses que tiene pendiente de pago.  Normalmente, el sistema le presentará la fecha en que se está actualmente.	Final	Indica el día en que terminan las vacaciones, calculada de acuerdo al tiempo a tomar.</td></tr></table><p>Recuerde que no necesita cambiar las fechas del Período Trabajado y el Período Libre, ya que ellas varían automáticamente conforme se van realizando los cambios en los datos a pagar; sin embargo, si ésta no coincide con lo real, cambie la fecha inicial y PayDay calculará la final.<p>3.	[ X ] OJO!!   Falta pagar una Planilla<p>Es una opción que le permite indicar que está pagando las vacaciones a un empleado pero que aún le hace falta un pago regular  -semanal, bisemanal, quincenal, mensual-. <p>Al activarla, PayDay hace lo siguiente:<br>En la planilla de vacaciones, realiza los descuentos del empleado para los acreedores del próximo período.  Es decir, no afecta las deducciones del mes en curso (el campo descontado en el mes); sino que toma los descuentos del mes siguiente y luego de postear las Vacaciones, deja el Status del empleado "Activo" por una planilla regular más.<p>De esta forma, el empleado se incluirá en la siguiente planilla regular y le hará los descuentos que tenga pendiente para sus acreedores en el mes en curso, y al finalizar esta planilla regular, cambiará su status a "Vacaciones".<p>4.	Acreedores <br>Realizar descuentos de Acreedores, cuantas veces.<br>En Vacaciones podemos indicar, si se requiere efectuar deducciones a los empleados con respecto a sus deudas con los acreedores y cuántas veces debe hacerse este descuento.   Esta opción es muy útil, debido a que en ocasiones, dependiendo del tiempo que el trabajador va a estar libre, es necesario cambiar la cantidad de deducciones que se requiera efectuar. 				<p>Dependiendo del grupo de pago al que pertenece el empleado, indique la cantidad de deducciones a realizar, por ejemplo 2, para dos quincenas o 4, para cuatro semanas. <p>5.	Ingreso que acumula para Vacación<p>Recordemos que para pagar vacaciones se realiza el cálculo del promedio de los últimos once meses,  tomados en cuenta desde la fecha del último día pagado al empleado hacia atrás.  En ésta pantalla se muestran las fechas utilizadas para éste cálculo y también los montos devengados por el empleado en cada uno de éstos meses.<br>En virtud de que algunas empresas requieren variar las fechas de éste cálculo, hemos habilitado los campos Ingreso que acumula para vacaciones Desde y Hasta, que le permitirán cambiar los meses considerados en el cálculo. <br>Si el valor de algún mes no concuerda con sus cálculos, tome la opción Ajuste a los Acumulados y verifique los ingresos reales recibidos por éste o el informe de salarios por año donde se muestran los ingresos que ha tenido la persona.<p>En esta pantalla se ilustra el resumen del cálculo de las vacaciones, allí encontrará la siguiente información:<br> <br>a.  Total de los últimos 11 meses:  muestra la suma total de los salarios devengados por el trabajador.<br>		<br>b.  Promedio de los últimos 11 meses: Es el promedio de los salarios devengados por el empleado en los últimos once meses trabajados y que se compara con el salario base.<p>c.  Ultima Base Mensual:  Este es el salario que tiene el empleado actualmente.  Si se le realizó aumento salarial, el monto a pagar en vacaciones no pueden ser menor que esta cantidad. <p>d.  Montos Calculados:  Es el valor que el programa ha calculado que se debe pagar de vacaciones y para obtenerlo, realiza lo siguiente: <p><ul><br><li> Se hace una comparación entre el promedio de los últimos once meses y el último salario base mensual, para identificar cuál de los dos es el mayor. <br><li> Una vez seleccionado el mayor, se multiplica por los días o meses a pagar. <br></ul><p>6.     Monto a Pagar:  Inicialmente es la misma cantidad que el programa ha calculado que se le debe pagar al empleado (montos calculados); sin embargo es un campo abierto, que usted puede modificar si lo decide, luego de efectuar sus propios cálculos.<p>7. Informe: Nos presenta un informe muy completo que ilustra el cálculo completo de las vacaciones que se está realizando.</div>
+<p>
+
+<table border="0" cellpadding="3" width="99%" class=".body">
+
+  
+
+  
+</table>
+
+
+
+
+</div>
+
+<hr>
+<span class="body"><small>Last Updated: <i>01/31/07</i></small></span>
+<p>&nbsp;<br></p>
+</body>
+</html>

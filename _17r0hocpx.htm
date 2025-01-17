@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+<head> 
+		<meta charset="utf-8" /> 
+	 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	 	<title>Datos de la Deuda - PayDay Help</title>	 
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+		<!-- <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js#startOpened,overrideConsole"></script> -->
+	<link rel="stylesheet" type="text/css" href="templates/scripts/bootstrap/dist/css/bootstrap.min.css" />	
+	<link rel="stylesheet" type="text/css" href="templates/scripts/fontawesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="templates/wwhelp.css" />
+
+	 	<script src="templates/scripts/jquery/jquery.min.js"></script>	
+
+		<script src="templates/scripts/highlightjs/highlight.pack.js"></script>
+	<script src="templates/scripts/highlightjs-badge.min.js"></script> 
+	<link href="templates/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+  	<script src="templates/scripts/ww.jquery.min.js"></script>
+
+	 <script src="templates/scripts/wwhelp.js"></script>
+
+	<topictype value="Topictype" />
+	<script>		  
+	$(document).ready( function() {
+		helpBuilder.initializeLayout();
+		// expand all top level topics
+		setTimeout( helpBuilder.tocExpandTop, 2);
+	});
+	</script>
+</head>
+<body style="background-color:#F5FAFF;">
+
+	 <div class="flex-master">
+	<div class="banner">
+				<img src="images/escudo.png" class="banner-logo" />
+				<div class="projectname">PayDay Help</div>
+
+		  </div>
+
+		  <div class="page-content">
+				<nav class="topic-outline">
+				<div class="topic-outline-header">En esta página:</div>
+					 <div class="topic-outline-content"></div>
+				</nav>
+		  <div class="splitter"></div>
+		  <div class="main-content">
+
+				<!-- Rendered Content -->
+				<article class="content-pane">
+				<div class="row">
+					<div class="column left just">
+					</div>
+						<div class="column center just">
+
+
+<header class="content-title">
+	 <img src=images\Topic.png>
+Datos de la Deuda
+</header>
+
+<div class="content-body" id="body"><p>La pantalla Datos de las Deudas contiene los siguientes datos:<p><p align="CENTER"><img src="images\mant\deuda.png" ></p><br> <br>
+<table align="Center" border="1" width="90%">
+<tr>   
+  <th>Campo</th>
+  <th>Descripción</th>
+</tr>
+<tr>
+  <td>Empleado</td>
+  <td>Seleccione al trabajador de la lista desplegada</td>
+</tr>
+
+<tr>
+  <td>Acreedor</td>
+  <td>Seleccione el acreedor con el cual el empleado tiene la deuda.</td>
+</tr>
+
+<tr>
+  <td>Deuda #</td>
+  <td>Se refiere al número de deuda del empleado con ese acreedor particularmente.  Por ejemplo, si un empleado tiene cinco descuentos con diferentes acreedores, cada uno debe tener 01 en el número de deuda.   Este valor debe ser diferente de "01" solamente en los casos en que un empleado tenga más de una deuda con el mismo acreedor.  </td>
+</tr>
+
+<tr>
+  <td>Prioridad </td>
+  <td>Se utiliza para indicar al sistema el orden en que las deudas de un trabajador deban ser descontadas.  La prioridad más alta es 1 y la más baja es 9.   Cuando se crea la deuda inicialmente, la prioridad predeterminada es 4. Al crear dos deudas, con igual prioridad, el sistema las procesa en el orden en que  fueron creadas.  Se recomienda la prioridad 1 para Pensión Alimenticia y la 2 para Préstamos Hipotecarios.</td>
+</tr>
+
+<tr>
+  <td>Frecuencia</td>
+  <td>Se refiere a la forma en que deseamos que se efectúe el descuento al empleado: 
+ <p><b>Cada planilla de pago:</b>	hace el descuento en cada planilla que se haga al empleado. </p>
+ <p><b>Sólo en comisiones:</b>  realiza el descuento en las planillas extraordinarias donde sólo se estén pagando las comisiones. </p>
+ <p><b>Otros:</b>	Para indicar en qué semana o quincena específica debe efectuarse el descuento.  Si la forma de pago es Bisemanal, indique la quincena y será considerado como bisemanal. </p>
+</td>
+</tr>
+
+<tr>
+  <td>Status</td>
+  <td>Al crear una deuda, su estatus debe ser activo, sin embargo, este puede variar de la siguiente forma:
+<p><b>Inactiva:</b> puede utilizarse para desactivar temporalmente el descuento. </p>
+<p><b>Cancelada:</b>	Es para desactivarla permanentemente.  Si PayDay lleva el control del saldo de la deuda, cuando el éste sea cero, el sistema automáticamente la colocará como cancelada.</P>
+</td>
+</tr>
+
+<tr>
+  <td>Realizar el pago</td>
+  <td>Se indica de que forma queremos confeccionar el cheque para pagar al acreedor, con las siguiente opciones:
+<p><b>Conjunto:</b>  Se consolidan los pagos al acreedor en un sólo cheque.</p>
+<p><b>Individual:</b>	Se imprimen cheques individuales por las retenciones realizadas de esta deuda.</p>
+<p><small>Nota: Si el pago al acreedor será mediante ACH, todas las deudas deben ser configuradas para Realizar el Pago de forma Individual.</small>
+</p>
+</td>
+</tr>
+
+<tr>
+  <td>Descontar en diciembre</td>
+  <td>Al activar esta opción, se indica al sistema que se realice el descuento al trabajador en las planillas del mes de diciembre.</td>
+</tr>
+
+<tr>
+  <td Nowrap>Descontar en próxima planilla</td>
+  <td>Permite activar o desactivar el descuento para la próxima planilla, sin necesidad de cambiar el estatus de la deuda.  </td>
+</tr>
+
+<tr>
+  <td>Retener el pago al acreedor</td>
+  <td>Active esta opción sólo si va a seguir efectuando el descuento al empleado, pero (temporalmente) no va a emitir el cheque para el acreedor, quizás por conflictos legales entre el empleado y su acreedor.  No debe utilizarse para Cuentas por Cobrar Empleados.</td>
+</tr>
+
+<tr>
+  <td>Paga Gastos de Manejo</td>
+  <td>Se puede descontar del cheque para el acreedor un porcentaje en concepto de manejo de la cuenta. Para definir el porcentaje a descontar, vea la opción <i>Mantenimiento|Configuración|Opciones, pestaña Misceláneos</i>.</td>
+</tr>
+
+<tr>
+  <td>Aparece en Carta de Trabajo</td>
+  <td>Desactivada, indica que la deuda no se liste en las cartas de trabajo que se emitan al trabajador. </td>
+</tr>
+
+<tr>
+  <td>Fecha de Inicio</td>
+  <td>Fecha en que se inicia la deuda en el sistema.  El sistema controla si debe comenzar a hacer el descuento, a partir de esta fecha. Importante tener en cuanta al momento de crear la deuda, que esta fecha NO PUEDE ESTAR VACIA.
+</td>
+</tr>
+
+<tr>
+  <td>Referencia</td>
+  <td>Puede colocar el número de préstamo.  Si al acreedor de ésta deuda es un Banco y se le paga por Transferencia (ACH), este campo es requerido.  </td>
+</tr>
+
+<tr>
+  <td>Tipo de Deuda</td>
+  <td>Contempla los diferentes tipos de deudas y el porcentaje permitido a descontar, según la ley.  De acuerdo al tipo seleccionado, PayDay validará en cada planilla que el descuento no exceda este porcentaje.  Si el usuario prefiere que PayDay no realice esta validación, seleccione la opción NO LIMITAR. </td>
+</tr>
+
+<tr>
+  <td>Llevar Saldo de la Deuda</td>
+  <td>Si conoce el saldo actual de la deuda y desea llevar el control del saldo, marque esta opción y luego coloque lo siguiente:
+<p>Monto Inicial:	Es el monto original de la deuda. </p>
+<p>Saldo actual:	Indique el saldo actual de esta deuda.  A medida que se van haciendo las deducciones, este monto va disminuyendo. </p>
+<p>Cuando el saldo de la deuda sea cero, PayDay cambiará el estatus de la misma a cancelada, y no le seguirá efectuando el descuento. </p>
+<p>Una vez creada la deuda con su saldo, usted solo podrá cambiar éste valor, realizando un <a href="_1tm0m9oqw.htm" >Ajuste al Saldo de la Deuda</a>.
+</td>
+</tr>
+
+<tr>
+  <td>Descontado en el mes</td>
+  <td>Muestra el total en dinero que ya ha descontado en el mes corriente para ésta deuda.</td>
+</tr>
+
+<tr>
+  <td>Monto a Descontar</td>
+  <td>Existen tres formas de hacer los descuentos a los empleados, de las que sólo debe elegir una para cada deuda.
+<p><b>Descuento x mes</b>:  Coloque el monto total que debe ser descontado al mes para el pago de la deuda.  PayDay se encargará de dividir esta cantidad entre 2 quincenas o 4 semanas, según aplique. Si el empleado es semanal, el descuento sólo se efectuará hasta la cuarta semana, que completa el mes regular de pago.</p>
+<p><b>Descuento fijo</b>:	Introduzca la cantidad fija que deba descontarse en cada planilla de pago.  Si sus pagos son semanales, el descuento se realizará inclusive en la quinta semana. De igual modo, para los empleados bisemanales, se realizará en la tercera bisemana.  
+<p><b>Porcentaje</b>:	 Coloque el porcentaje que desea descontar del salario para el pago de la deuda.  Este porcentaje puede aplicarse también al salario bruto total, activando la opción <u>Desc en % son sobre Bruto Total</u> en la pantalla de <i>Mantenimiento|Configuración|Opciones, pestaña Misceláneos</i>.</p>
+</td> </tr>
+
+<tr>
+  <td>Monto total a pagar al Acreedor</td>
+  <td>En algunas deudas, el empleado solo paga una parte y el empleador, el resto.  En esta opción, usted puede indicar el monto total que se debe entregar al Acreedor mensualmente, por la deuda.  Y en los campos de Descuento X Mes o Descuento Fijo, coloque la parte que el empleado debe aportar. </td>
+</tr>
+
+<tr>
+  <td>La Compañía cubre el 100% del pago </td>
+  <td>Con esta opción, la compañía no le realiza descuento alguno al empleado, sino que absorbe el valor de la deuda en su totalidad, pagando al acreedor mensualmente lo que corresponda por la deuda. </td>
+</tr>
+
+</table>
+<p>	 <p><p>	<br>
+</div>
+						</div>
+				</div>
+				</article>
+					 <hr />
+					 <div><a href="http://www.payday.com.pa"><img width=11% align=right src="images/logo.png"/></a></div>
+				<small>
+						  &copy; Sosa y Cía, S.A., 1996-2025 &bull;
+						  Última actualización: 01/03/22
+						  <br />
+					 </small>		
+				<br class="clearfix" />
+					 <br />
+					 <!-- End Rendered Content -->
+				</div>
+		  </div>		  
+	 </div>
+
+
+<div style="position: absolute; left: 0; bottom: 0; padding: 8px; background-color: #333; color: white; display:block !important; font-size: 11pt; border-radius-top-right: 3px; box-shadow: 3px 3px 8px #535353;opacity: 0.87" data-id="hbp">	
+	<a href="http://helpbuilder.west-wind.com/" target="_helpbuilder">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAFTklEQVR4Xt3TW2wcZxnG8f83M7szs7sz68M6PgUrbp0El7ZJG1Kq1LiyAmqIDaEpBkFUKRI0SE2LlEr0AirccNEUqghRJECUcugFbWQQIXCRCCiqiB1aQkSjOE5iJ44TH2Lv2uvd2eOcPnIRS16pXCAhLvjdvO/V+1w8evmfO3bsqHn69NctKRH8FwiAAwcORPZ/1ntmY2f1y8mEu1lVAwEiL+CkUNXvdu3ZoCwtVvcFaD2ReCLS/+LnYlMnz/s3zlw7byXiJzvvT/z6Dz/5aokPIIaGhrTeLePH+x72+4WgFhBK4fcfNNRTp6Milqzj3v4d7HzhcbwVh5FXTjF95jqy6i/UWe7Q4IB47fDhwyFrKLqYeKLno97qcULJWCYbHXU9CYAipHbkOcT2Jx6h56ldbNv3KF4+xK2EjJ+6gKqC61aa09nwxz8frgwPDByI1QTc0+l+MhoRAEiJFGpkz859Ky8f+12GVXd3SLp2dNO6qZWgUKS8lEXTY3xx+Fk2fOp+orZJWIVSIbL3/Sv68ODgoModWiq5/dB7l8QLABE1G3zn6Gi8577CG7v62lh1I2tTyuVRQx/fd9ECF7/qYthxtg4+xPzFa7hhldJiAbdq7h49V/c8cARAsMbzzz6+/uB+OdLRpnRwx/yyzosnHmLGb8NIJrCUADNmYN7eg1gdYcLi9SdfYcund/DuW6MgBBqV4uZ1E3dfuPD2gsIaW+91v7Z6XEoYm27lz+e3c7sT3EKZas6hXKiQ9Jb5eJtHPDfDzF9GeGD3VvLpDCglkCV8ZHzesQ8CaKyhm2p3GALA2bEIvzoRJZGsUC98mpIQr1Ox4grrGyS9m0v4XoTZOZWxv/2DhVkHEYJAwVACwjC2B/iWYI2u7p2vrd9411fK5YAmK0JDXGEpD4rViIwlWAl1ohGFhA4tSYEZ11kJDEqGzdvfexOvHAAKughRVN/t7dlqaazx1D7jvq4NWbxKFRWD9851cH0uC64DpZD2VptiqFIoCG56Klq+imqCcAPMtnqyV2eoV3y0iETTiKZSTnNNB9u6Zf3enSFf6I+w40GfDe0pJBpGNIrjVBifzFDOOrQkJM1WiKmGVEouN8enyVydpG3jhwiisD7l8eFuGzBrOxCKyiqpRDj+zjSBiJKrhDSYGreKPgsZh3S2gG6aJOtM6u2QSvYSW7p0DHuJhk90cVdDDiPVXklPpW8J1vjNG3t+v7nLHljOeSxlVV76WQuaKvFEBA2JrqtkClVk4OJWXEw7jqZH8dwyE++8i2YbCFmhyQIjqv1z/NLIA0rNH7xa//RLv9zkP/dqJy8f66ZY9licm+PG+EWKrsQPIRWLcuvyJNPnzjIzdoGFqSnSU9cJ/RKpthS6ZbG0VEJf13kcoCbg6tlf3Hz/cuatpkabhoTEXtdKPlskOzfPxJkRVpwqjuNgqUWkhEJ6gdzsLG7eQWiC0u3pzM+CYThNjc0/AtCoxbKz/M2Gcv1n3FC31ZUrtNS7NFsWxaLP8vWLtG/qpuRrtDeZLC47qJqGbteBrpJfvEXgl4k3dh/542+PLgIIPsA9jz4z2NDU8mYuW1Yv//VPqGoEOyEwDAiR5PKScrlKY1Lg+z45x0NKj1B6JJqbTzzWc2jv8PDng9qAWjw88O0vZaav/PTm5QkTBCAJZYBEAgABAlCVEMsUVN0qFczhjraeJycnf1DlDsG/x5a+pz8yf2Xyh+VCtdctV5BIpJRIQgQ+AMgQFNIR0/pGKTf6OiD5Tz24+/DH7MZd348l+/5uWL1pM/5INmb1Xk3U952wmh7b37ptKMb/rX8BL2lNNiGFZBEAAAAASUVORK5CYII="
+ style="float: left; margin-right: 15px;"/>
+	</a>
+	This page was generated by the shareware version of <a href="http://helpbuilder.west-wind.com/" target="_helpbuilder" style="color: cornsilk;font-weight: bold;">West Wind Html Help Builder</a>.	
+</div></body>
+</html>

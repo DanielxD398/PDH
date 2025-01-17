@@ -1,0 +1,43 @@
+
+	
+<html>
+<head>
+<title>Modificar una deuda existente</title>
+<LINK rel="stylesheet" type="text/css" href="templates/wwhelp.css">
+</head>
+<body topmargin=0 leftmargin=0>
+<table border=0 width="100%" bgcolor="lightblue" class="banner">
+<tr><td valign="center">
+<span style="font:8pt Verdana"><i>PayDay Help</i></span></td></tr>
+<tr><td><span style="font:10pt Verdana"><b>Modificar una deuda existente</b></span>
+</td></tr>
+</table>
+
+<div style="margin-left:10pt;margin-right=10pt">
+
+
+
+<p>
+
+
+<br><p>
+<div class="body">La pantalla Datos de las Deudas contiene los siguientes datos:<p><p align="CENTER"><img src="images\mant\deuda.png" ></p><br> <br><table align="Center" border="1" width="90%"><tr>     <th>Campo</th>  <th>Descripción</th></tr><tr>  <td>Empleado</td>  <td>Seleccione al trabajador de la lista desplegada</td></tr><tr>  <td>Acreedor</td>  <td>Seleccione el acreedor con el cual el empleado tiene la deuda.</td></tr><tr>  <td>Deuda #</td>  <td>Se refiere al número de deuda del empleado con ese acreedor particularmente.  Por ejemplo, si un empleado tiene cinco descuentos con diferentes acreedores, cada uno debe tener 01 en el número de deuda.   Este valor debe ser diferente de "01" solamente en los casos en que un empleado tenga más de una deuda con el mismo acreedor.  </td></tr><tr>  <td>Prioridad </td>  <td>Úsese para indicar al sistema el orden en que las deudas de un trabajador deban ser descontadas.  La prioridad más alta es 1 y la más baja es 9.   Cuando crea la deuda inicialmente, la prioridad predetermindad es 4. Al crear dos deudas, con igual prioridad, el sistema las procesa en el orden en que  fueron creadas.  Se recomienda la prioridad 1 para Pensión Alimenticia y la 2 para Préstamos Hipotecarios.</td></tr><tr>  <td>Frecuencia</td>  <td>Se refiere a la forma en que deseamos que se efectúe el descuento al empleado:  <p>Cada planilla de pago:	hace el descuento en cada planilla que se haga al empleado. </p> <p>Sólo en comisiones:  realiza el descuento en las planillas extraordinarias donde sólo se estén pagando las comisiones. </p> <p>Otros:	Para indicar en qué semana o quincena específica debe efectuarse el descuento.  Si la forma de pago es Bisemanal, indique la quincena y será considerado como bisemana. </p></td></tr><tr>  <td>Status</td>  <td>Al crear una deuda, su estatus debe ser activo, sin embargo este puede variar de la siguiente forma:Inactiva: puede utilizarse para desactivar temporalmente el descuento. Cancelada:	Es para desactivarla permanentemente.  Si PayDay lleva el control del saldo de la deuda, cuando el éste sea cero, el sistema automáticamente la colocará como cancelada.</td></tr><tr>  <td>Realizar el pago</td>  <td>Se indica de que forma queremos confeccionar el cheque para pagar al acreedor, con las siguiente opciones:<p>Conjunto:  Se consolidan los pagos al acreedor en un sólo cheque.</p><p>Individual:	Se imprimen cheques individuales por las retenciones realizadas de esta deuda.</p></td></tr><tr>  <td>Descontar en diciembre</td>  <td>Al activar esta opción, no se realizará el descuento al trabajador en ninguna planilla del mes de diciembre.</td></tr><tr>  <td>Descontar en próxima planilla</td>  <td>Permite desactivar el descuento para la próxima planilla, sin necesidad de cambiar el status.  </td></tr><tr>  <td>Retener el pago al acreedor</td>  <td>Active esta opción sólo si va a seguir efectuando el descuento al empleado, pero (temporalmente) no va a emitir el cheque para el acreedor, quizás por conflictos legales entre el empleado y su acreedor.  No debe utilizarse para Cuentas por Cobrar Empleados.</td></tr><tr>  <td>Paga Gastos de Manejo</td>  <td>Se puede descontar del cheque para el acreedor un porcentaje en concepto de manejo de la cuenta. Para definir el porcentaje a descontar, vea la opción Configuración | Opciones | Misceláneos.</td></tr><tr>  <td>Aparece en Carta de Trabajo</td>  <td>Desactivada, indica que la deuda no se liste en las cartas de trabajo que se emitan al trabajador. </td></tr><tr>  <td>Fecha de Inicio</td>  <td>Fecha en que inició o se creó la deuda en el sistema.</td></tr><tr>  <td>Referencia</td>  <td>Puede colocar el número de préstamo.  Si al acreedor de ésta deuda es un Banco y se le paga por Transferencia (ACH), este campo es requerido.  </td></tr><tr>  <td>Tipo de Deuda</td>  <td>Contempla los diferentes tipos de deudas y el porcentaje permitido a descontar, según la ley.  De acuerdo al tipo seleccionado, PayDay validará en cada planilla que el descuento no exceda este porcentaje.  Si el usuario prefiere que PayDay no realice esta validación, seleccione la opción NO LIMITAR. </td></tr><tr>  <td>Llevar Saldo de la Deuda</td>  <td>Si conoce el saldo actual de la deuda y desea llevar el control del saldo, marque esta opción y luego coloque lo siguiente:<p>Monto Inicial:	Es el monto original de la deuda. </p><p>Saldo actual:	Indique el saldo actual de esta deuda.  A medida que se van haciendo las deducciones, este monto va disminuyendo. </p><p>Cuando el saldo de la deuda sea cero, PayDay cambiará el status de la misma a cancelada, y no le seguirá efectuando el descuento. </p><p>Una vez creada la deuda con su saldo, usted solo podrá cambiar éste valor, realizando un <a href="_1TM0M9OQW.htm" >Ajuste al Saldo de la Deuda</a>.</td></tr><tr>  <td>Descontado en el mes</td>  <td>Muestra el total en dinero que ya ha descontado en el mes corriente para ésta deuda.</td></tr><tr>  <td>Monto a Descontar</td>  <td>Existen tres formas de hacer los descuentos a los empleados, de las que sólo debe elegir una para cada deuda.<p><b>Descuento x mes</b>:  Coloque el monto total que debe ser descontado al mes para el pago de la deuda.  PayDay se encargará de dividir esta cantidad entre 2 quincenas o 4 semanas, según aplique. Si el empleado es semanal, el descuento sólo se efectuará hasta la cuarta semana, que completa el mes regular de pago.</p><p><b>Descuento fijo</b>:	Introduzca la cantidad fija que deba descontarse en cada planilla de pago.  Si sus pagos son semanales, el descuento se realizará inclusive en la quinta semana. De igual modo, para los empleados bisemanales, se realizará en la tercera bisemana.  <p><b>Porcentaje</b>:	 Coloque el porcentaje que desea descontar del salario para el pago de la deuda.  Este porcentaje puede aplicarse también al salario bruto total, activando la opción <u>Desc en % son sobre Bruto Total</u> en la pantalla de Configuración | Misceláneos.</p></td> </tr></table><p>	 <p><p>	<br></div>
+<p>
+
+<table border="0" cellpadding="3" width="99%" class=".body">
+
+  
+
+  
+</table>
+
+
+
+
+</div>
+
+<hr>
+<span class="body"><small>Last Updated: <i>06/10/06</i></small></span>
+<p>&nbsp;<br></p>
+</body>
+</html>
